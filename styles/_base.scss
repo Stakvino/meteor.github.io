@@ -1,0 +1,60 @@
+/*Variables*/
+$main-green: #a2cf8d;
+$main-font: 'Open Sans';
+$hover-green: #239c6d;
+$red-footer-link: #b73e3e;
+$dark-gray: #2e3335;
+$light-gray: #f4f4f4;
+$footer-black: #202628;
+
+/*Global*/
+body{
+  font-family: $main-font, sans-serif;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a,button{
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+button{
+  cursor: pointer;
+  border: none;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+.green-link,
+.white-link,
+nav a,
+div.slideshow-item h2,
+h4.section-header,
+div.achievement-item span,
+div.slideshow-item span{
+  text-transform: uppercase;
+}
+/*
+@keyframes green-hover {
+  from {opacity: 1;}
+  to {opacity: .8;}
+}
+&:hover{
+  animation-name: feater-link-hover-animation;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+*/
