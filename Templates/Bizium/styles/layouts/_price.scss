@@ -1,0 +1,37 @@
+div.pricing-section{
+  padding: 70px 0;
+  div.pricing-container{
+    width: 1170px;
+    margin: 0 auto;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+    }
+    div.pricing-items{
+      display: grid;
+      grid-template-columns: repeat(4, 262px);
+      grid-template-rows: 1fr;
+      justify-content: space-between;
+      @media screen and (max-width: $first-break){
+       grid-template-columns: repeat(4, 212px);
+       justify-content: space-around;
+      }
+      @media screen and (max-width: $second-break){
+        grid-template-columns: repeat(2, 345px);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 40px 0;
+      }
+      @media screen and (max-width: $third-break){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      @import "../components/price-item";
+    }
+  }
+}

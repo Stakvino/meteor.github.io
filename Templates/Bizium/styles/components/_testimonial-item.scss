@@ -1,0 +1,30 @@
+div.testimonial-item{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $third-break){
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  p{
+   border-radius: 5px;
+   background-color: white;
+   font-size: .82em;
+   padding: 30px 20px; 
+  }
+  img.client-img{
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  span.client-name{
+    margin: 5px 0;
+  }
+  span.client-job{
+    margin-bottom: 20px;
+    font-size: .9em;
+    color: white;
+  }
+}
