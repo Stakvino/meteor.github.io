@@ -24,6 +24,9 @@ div.header-slider{
       @media screen and (max-width: $third-break){
         width: 90%;
       }
+      @media screen and (max-width: 690px){
+        top: 35%;
+      }
       h2{
         text-align: center;
         color: white;
@@ -38,6 +41,10 @@ div.header-slider{
         }
         @media screen and (max-width: 690px){
           font-size: 1.3em;
+        }
+        @media screen and (max-width: 500px){
+         font-size: .9em;
+         margin-bottom: 15px;
         }
       }
     }

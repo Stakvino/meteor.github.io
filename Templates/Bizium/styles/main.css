@@ -98,6 +98,13 @@ html {
   font-family: "Montserrat";
   color: #414141; }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 img {
   max-width: 100%; }
 
@@ -169,6 +176,14 @@ a.slide-read-more {
     a.slide-read-more {
       padding: 10px 20px;
       font-size: .85em; } }
+  @media screen and (max-width: 500px) {
+    a.slide-read-more {
+      font-size: .75em;
+      padding: 10px 20px; } }
+  @media screen and (max-width: 500px) {
+    a.slide-read-more {
+      font-size: .7em;
+      padding: 8px 15px; } }
 
 a.about-read-more {
   color: white;
@@ -279,6 +294,9 @@ div.header-slider {
     @media screen and (max-width: 770px) {
       div.header-slider div.slide div.slide-caption {
         width: 90%; } }
+    @media screen and (max-width: 690px) {
+      div.header-slider div.slide div.slide-caption {
+        top: 35%; } }
     div.header-slider div.slide div.slide-caption h2 {
       text-align: center;
       color: white;
@@ -294,6 +312,10 @@ div.header-slider {
       @media screen and (max-width: 690px) {
         div.header-slider div.slide div.slide-caption h2 {
           font-size: 1.3em; } }
+      @media screen and (max-width: 500px) {
+        div.header-slider div.slide div.slide-caption h2 {
+          font-size: .9em;
+          margin-bottom: 15px; } }
 
 div.main {
   width: 100%; }

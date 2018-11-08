@@ -13,6 +13,14 @@ a.slide-read-more{
     padding: 10px 20px;
     font-size: .85em;
   }
+  @media screen and (max-width: 500px){
+   font-size: .75em;
+   padding: 10px 20px;
+  }
+  @media screen and (max-width: 500px){
+   font-size: .7em;
+   padding: 8px 15px;
+  }
 }
 a.about-read-more{
   color: white;
