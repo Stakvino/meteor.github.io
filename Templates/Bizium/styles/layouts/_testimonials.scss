@@ -21,6 +21,9 @@ div.testimonials-section{
       @media screen and (max-width: $third-break){
         height: 750px;
       }
+      @media screen and (max-width: 620px){
+        height: 800px;
+      }
       div.testimonial-slide{
         display: flex;
         justify-content: space-between;

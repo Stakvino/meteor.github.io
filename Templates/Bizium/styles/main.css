@@ -594,6 +594,9 @@ div.main {
         @media screen and (max-width: 770px) {
           div.main div.testimonials-section div.testimonials-container div.testimonial-slider {
             height: 750px; } }
+        @media screen and (max-width: 620px) {
+          div.main div.testimonials-section div.testimonials-container div.testimonial-slider {
+            height: 800px; } }
         div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide {
           display: flex;
           justify-content: space-between; }
@@ -616,18 +619,35 @@ div.main {
               border-radius: 5px;
               background-color: white;
               font-size: .82em;
-              padding: 30px 20px; }
+              padding: 30px 20px;
+              text-align: center; }
+              @media screen and (max-width: 480px) {
+                div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item p {
+                  padding: 20px; } }
+              @media screen and (max-width: 360px) {
+                div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item p {
+                  height: 150px;
+                  overflow-y: scroll; } }
             div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item img.client-img {
               width: 100px;
               border-radius: 50%;
               margin-top: 20px;
               margin-bottom: 8px; }
+              @media screen and (max-width: 420px) {
+                div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item img.client-img {
+                  width: 80px; } }
             div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item span.client-name {
               margin: 5px 0; }
+              @media screen and (max-width: 420px) {
+                div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item span.client-name {
+                  font-size: .9em; } }
             div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item span.client-job {
               margin-bottom: 20px;
               font-size: .9em;
               color: white; }
+              @media screen and (max-width: 420px) {
+                div.main div.testimonials-section div.testimonials-container div.testimonial-slider div.testimonial-slide div.testimonial-item span.client-job {
+                  font-size: .9em; } }
   div.main div.blog-section {
     padding: 70px 0;
     background-color: #f0f0f0; }
