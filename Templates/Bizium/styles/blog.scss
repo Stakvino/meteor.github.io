@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+}
+.user-button{
+  border: black solid 1px;
+  width: 130px;
+}
+/**********************************************************************************/
+header{
+  nav{
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: background-color .5s;
+    box-shadow: 1px 0 5px 5px rgba(150, 150, 150, .5);
+    div.nav-container{
+      width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      div.logo-container{
+        
+      }
+      div.login-container{
+        display: flex;
+        div{
+          
+        }
+      }
+    }
+  }
+}
+div.blogs-section{
+  margin-top: 62px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  aside{
+    
+  }
+  div.posts-container{
+    div.post-item{
+      h3.post-title{
+        
+      }
+      div.post-image{
+        
+      }
+      p.post-description{
+        
+      }
+      div.post-infos{
+        display: flex;
+      }
+    }
+  }
+}

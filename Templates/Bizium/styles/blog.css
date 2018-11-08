@@ -1,0 +1,35 @@
+* {
+  margin: 0; }
+
+.user-button {
+  border: black solid 1px;
+  width: 130px; }
+
+/**********************************************************************************/
+header nav {
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background-color .5s;
+  box-shadow: 1px 0 5px 5px rgba(150, 150, 150, 0.5); }
+  header nav div.nav-container {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header nav div.nav-container div.login-container {
+      display: flex; }
+
+div.blogs-section {
+  margin-top: 62px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row-reverse; }
+  div.blogs-section div.posts-container div.post-item div.post-infos {
+    display: flex; }
+
+/*# sourceMappingURL=blog.css.map */
