@@ -1,11 +1,10 @@
-var jQuery = require('./../vendor/jquery-1.12.0.min.js');
+var jQuery = require('./../vendor/jquery-1.11.2.min.js');
 
 (function($) {
-
+   var $page = $("html");
    $.fn.jqiaScrollTo = function(to, options) {
      options = $.extend(true, {}, $.fn.jqiaScrollTo.defaults, options);
      
-     const $page = $("html");
      $page.stop();
      var scrollTo = 0;
      if(typeof to == "number"){

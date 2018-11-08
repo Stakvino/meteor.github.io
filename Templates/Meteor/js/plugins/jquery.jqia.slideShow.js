@@ -1,7 +1,9 @@
-var jQuery = require('./../vendor/jquery-1.12.0.min.js');
+var jQuery = require('./../vendor/jquery-1.11.2.min.js');
 
 (function($) {
    var namespace = 'jqiaSlideShow';
+   var currentSlideNumber = 0;
+   var timerId = null; 
   
    var methods = {
       init: function(options) {
@@ -15,9 +17,7 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
             ) {
             $.error('The plugin has already been initialized');
          }
-         
-         this.data("currentSlideNumber", 0);
-         this.data("timerId", null);
+
          this.data(namespace, options);
 
          var $sliderContainer = this.addClass("slider-container");
@@ -26,7 +26,7 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
          .each(function(index){
            $(this).css("left", index == 0 ? 0 : -$sliderContainer.width());
          });
-
+         
          if(options.controls){
            $sliderContainer.append( $(`<div class="controls-container">
                                         <div class="select-slides-container"></div>
@@ -41,7 +41,7 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
            $selectSlidesContainer.find("button.select-slide-control").each(function(index){
              var selectSlideControl = $(this);
              selectSlideControl.click(function(){
-               methods.pause.call($sliderContainer);
+               methods.pause();
                methods.goToSlide.call($sliderContainer, index);
                if(options.autoplay){
                  methods.play.call($sliderContainer);
@@ -58,21 +58,17 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
         var $sliderContainer = this;
         var $sliders = $sliderContainer.find(".slider-item");
         var options = $sliderContainer.data(namespace);
-        var currentSlideNumber = $sliderContainer.data("currentSlideNumber");
-
+        
         if(slideNumber == currentSlideNumber){
           return ;
         }
-        //prepare new slide
         $sliders.eq(slideNumber).css("left", `${slideNumber > currentSlideNumber ?
                                      "100%" : "-100%"}`);
-        //slider animation
         $sliders.eq(currentSlideNumber).animate({left :`${slideNumber > currentSlideNumber ?
                                            "-100%" : "100%"}`},options.animationDuration);
         $sliders.eq(slideNumber).animate({left : 0}, options.animationDuration);
+        currentSlideNumber = slideNumber;
         
-        $sliderContainer.data("currentSlideNumber", slideNumber);
-
         if(options.translateContent){
           var content = $sliders.eq(slideNumber).find(".fade-translate");
           var leftValue = $sliderContainer.width() / 2;
@@ -92,15 +88,13 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
         var $sliders = $sliderContainer.find(".slider-item");
         var options = $sliderContainer.data(namespace);
         
-        var timerId = setInterval(function(){
-          var currentSlideNumber = $sliderContainer.data("currentSlideNumber");
+        timerId = setInterval(function(){
           var nextSlideNumber = (currentSlideNumber + 1)%$sliders.length;
           methods.goToSlide.call(this, nextSlideNumber);
         }.bind(this), options.delay * 1000);
-        $sliderContainer.data("timerId", timerId);
+        
       },
       pause: function(){
-        var timerId = this.data("timerId");
         clearInterval(timerId);
       }
    };

@@ -1,3 +1,6 @@
+var $ = require('./vendor/jquery-1.12.0.min.js');
+require('./plugins/jquery.jqia.slickNav.js');
+require('./plugins/jquery.jqia.slideShow.js');
 const $window = $(window);
 
 //Faq show/hide animation

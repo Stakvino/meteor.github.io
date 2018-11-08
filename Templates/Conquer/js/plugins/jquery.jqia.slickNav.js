@@ -1,4 +1,4 @@
-var jQuery = require('./../vendor/jquery-1.12.0.min.js');
+var jQuery = require('./../vendor/jquery-1.11.2.min.js');
 require('./jquery.jqia.scrollTo.js');
 
 (function($) {
@@ -18,9 +18,9 @@ require('./jquery.jqia.scrollTo.js');
 
  var $slickNavDOM = $(slickNavHTML);
  var $slickNavBut = $("button", $slickNavDOM);
- 
- $.fn.jqiaSlickNav = function(options) {
-   options = $.extend(true, {}, $.fn.jqiaSlickNav.defaults, options);
+ var $window = $(window);
+ $.fn.jqiaslickNav = function($anchorsCollection, options) {
+   options = $.extend(true, {}, $.fn.jqiaslickNav.defaults, options);
 
    //position the slicknav Button
    var $slickContainer = $(".slick-nav-container", $slickNavDOM);
@@ -34,17 +34,20 @@ require('./jquery.jqia.scrollTo.js');
 
    var $navBar = this;
    //position slick nav
-   $(window).resize(function(){
-     $slickNavDOM.css({top: $navBar.is(":hidden") ? 60 : $navBar.innerHeight()});
-   }).trigger("resize");
+   $slickNavDOM.css({top: $navBar.is(":hidden") ? 60 : $navBar.innerHeight()});
    var $linksCollection = $("a", $navBar);
    //event hadlers for nav links
    $linksCollection.each(function(index){
      var $this = $(this);
-     var $to = $($this.attr("href").slice(1));
+     if($this.attr("href") !== "#"){
+       return ;
+     }
      $this.click(function(e){
        e.preventDefault();
-       $navBar.jqiaScrollTo($to, options.scrollAnimationDuration);
+       $window.off("scroll", scrollChangeHighlight);
+       $navBar.jqiaScrollTo($anchorsCollection.eq(index), {finishCallback : function(){
+         $window.on("scroll", scrollChangeHighlight);
+       } });
      });
    });
 
@@ -56,7 +59,7 @@ require('./jquery.jqia.scrollTo.js');
    var $scrollUpBut = $("#scrollUp");
    //show and hide scrollUp button
    if(options.scrollTopButton){
-     $(window).scroll(function(){
+     $window.scroll(function(){
        //scrolling down will show scrollUp button
        var scrollTop = $(this).scrollTop();
        if( scrollTop > 270 && $scrollUpBut.is(":hidden") ){
@@ -68,34 +71,25 @@ require('./jquery.jqia.scrollTo.js');
    }
    $scrollUpBut.click(function(e){
      e.preventDefault();
-     $scrollUpBut.jqiaScrollTo(0, options.scrollAnimationDuration);
+     $scrollUpBut.jqiaScrollTo(0);
    });
 
    $linksCollection.each(function(index){
      var $linkCollection = $(this);
      var href = $linkCollection.attr("href");
-     var text = $linkCollection.text();
-     if(!text){
-       return;
-     }
-     var a = $(`<a href="${href}">${text}</a>`);
-     if($linkCollection.attr("data-anchor") === ""){
-       a.attr("data-anchor", "");
-     }
+     var a = $(`<a href="${href}">${$linkCollection.text()}</a>`);
      //add target attribute to new links created if it exist
      if( $linkCollection.attr("target") ){
        a.attr("target", $linkCollection.attr("target"));
      }
+
      //clicking on a slickNav link will scroll to the anchor
-     if(a.attr("data-anchor") === ""){
-       a.click(function(e){
-         e.preventDefault();
-         var $bar = $navBar.is(":hidden") ? $slickNavBut : $navBar;
-         var $to = $($(this).attr("href").slice(1));
-         $bar.jqiaScrollTo($to, options.scrollAnimationDuration);
-         $linksContainer.slideUp();
-       });
-     }
+     a.filter("[href=#]").click(function(e){
+       e.preventDefault();
+       var $bar = $navBar.is(":hidden") ? $slickNavBut : $navBar;
+       $bar.jqiaScrollTo($anchorsCollection.eq(index));
+       $linksContainer.slideUp();
+     });
      a.appendTo($linksContainer);
      //this will be used to keep event handlers
      /* 
@@ -131,12 +125,38 @@ require('./jquery.jqia.scrollTo.js');
      changeLinkHighlight($barNavLink, $slickNavLink);
    });
    
+   var $navBarSpace = $navBar.innerHeight() - $navBar.position().top;
+   function scrollChangeHighlight(){
+     var anchorPositions = $anchorsCollection.map(function(){
+       var anchorPosition = $(this).offset().top - $navBarSpace;
+       return anchorPosition < 0 ? 0 : anchorPosition;
+     }).toArray().concat([$("html").height()]);
+     
+     var scrollTop = $(this).scrollTop();
+     //scrolling will highlight the right link
+     for(var i = 0; i < anchorPositions.length; i++){
+       if(scrollTop >= anchorPositions[i] && scrollTop <= anchorPositions[i + 1]){
+         changeLinkHighlight($linksCollection.eq(i), $slickNavLinks.eq(i));
+       }
+     }
+   }
+   $window.scroll(scrollChangeHighlight).trigger("scroll");
+   var slickNavBut = $slickNavBut.get(0);
+   var spans = $slickNavBut.children().toArray();
+   $window.click(function(e){
+     var buttonClicked = spans.some(function(span){
+       return span == e.target;
+     }) || e.target == slickNavBut;
+     if($linksContainer.is(":visible") && !buttonClicked){
+       $linksContainer.slideUp();
+     }
+   });
    $slickNavDOM.prependTo(document.body);
 
    return this;
  };
 
- $.fn.jqiaSlickNav.defaults = {
+ $.fn.jqiaslickNav.defaults = {
     keepEventHandlers: [],
     keepStyle: false,
     position: "right",
