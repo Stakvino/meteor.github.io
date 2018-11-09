@@ -33,12 +33,12 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
                                        </div>`) );
            var $selectSlidesContainer = $("div.select-slides-container", $sliderContainer);
            $sliders.each(function(index){
-             $selectSlidesContainer.append(`<button class="select-slide-control"></button>`);
+             $selectSlidesContainer.append(`<div class="select-slide-control"></div>`);
              if(index == 0){
-               $("button", $selectSlidesContainer).addClass("selected-slide-control");
+               $("div", $selectSlidesContainer).addClass("selected-slide-control");
              }
            });
-           $selectSlidesContainer.find("button.select-slide-control").each(function(index){
+           $selectSlidesContainer.find("div.select-slide-control").each(function(index){
              var selectSlideControl = $(this);
              selectSlideControl.click(function(){
                methods.pause.call($sliderContainer);

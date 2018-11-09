@@ -13,24 +13,28 @@ div.about-section{
       width: 750px;
     }
     @media screen and (max-width: $third-break){
-      width: 100%;
+      width: 95%;
       flex-direction: column;
     }
-    img{
-      @media screen and (max-width: $first-break){
-        width: 455px;
-      }
-      @media screen and (max-width: $second-break){
-        width: 345px;
-      }
-      @media screen and (max-width: $third-break){
-        width: 558px;
-      }
-      @media screen and (max-width: 590px){
-        width: 95%;
+    div.about-img{
+      
+      img{
+        @media screen and (max-width: $first-break){
+          width: 455px;
+        }
+        @media screen and (max-width: $second-break){
+          width: 345px;
+        }
+        @media screen and (max-width: $third-break){
+          width: 558px;
+        }
+        @media screen and (max-width: 590px){
+          width: 100%;
+        }
       }
     }
     div.about-text-container{
+      width: 572px;
       margin-left: 40px;
       @media screen and (max-width: $first-break){
         width: 485px;
@@ -51,6 +55,9 @@ div.about-section{
         font-size: 2em;
         margin-top: 0;
         margin-bottom: 10px;
+        @media screen and (max-width: $third-break){
+          text-align: center;
+        }
       }
       p{
         margin-bottom: 20px;
