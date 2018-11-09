@@ -51,7 +51,6 @@ footer{
         }
         p{
           margin-bottom: 10px;
-          text-align: justify;
           @media screen and (max-width: $first-break){
             text-align: left;
           }

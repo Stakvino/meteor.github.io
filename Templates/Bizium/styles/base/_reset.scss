@@ -2,6 +2,8 @@ html{
   font-family: "Montserrat";
   color: $dark-gray; 
 }
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
 input,
 textarea,
 button,

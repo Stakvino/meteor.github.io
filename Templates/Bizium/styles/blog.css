@@ -1,5 +1,21 @@
+/**********************************************************************************/
 * {
   margin: 0; }
+
+body {
+  color: #414141;
+  font-family: "open sans"; }
+
+a {
+  color: #414141;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
 
 .user-button {
   border: black solid 1px;
@@ -13,7 +29,7 @@ header nav {
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: background-color .5s;
+  background-color: white;
   box-shadow: 1px 0 5px 5px rgba(150, 150, 150, 0.5); }
   header nav div.nav-container {
     width: 1140px;
@@ -24,12 +40,49 @@ header nav {
     header nav div.nav-container div.login-container {
       display: flex; }
 
-div.blogs-section {
+div.main-section {
   margin-top: 62px;
-  padding: 60px 0;
-  display: flex;
-  flex-direction: row-reverse; }
-  div.blogs-section div.posts-container div.post-item div.post-infos {
-    display: flex; }
+  padding: 60px 0; }
+  div.main-section div.blog-container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; }
+    div.main-section div.blog-container aside {
+      width: 330px;
+      margin-right: 15px; }
+      div.main-section div.blog-container aside > :not(:last-child) {
+        margin-bottom: 30px; }
+      div.main-section div.blog-container aside h4 {
+        margin-bottom: 20px;
+        font-size: 1em;
+        border-bottom: rgba(150, 150, 150, 0.3) solid 1px;
+        padding: 5px 0; }
+      div.main-section div.blog-container aside div.search-container {
+        width: 100%; }
+        div.main-section div.blog-container aside div.search-container input {
+          width: calc(100% - 27px);
+          padding: .5em 12px;
+          font-size: .92em;
+          font-family: "Montserrat";
+          border: rgba(150, 150, 150, 0.5) solid 1px;
+          border-radius: 4px;
+          transition: border-color .3s,box-shadow .3s; }
+          div.main-section div.blog-container aside div.search-container input:focus {
+            border-color: #00bcd4;
+            outline: none;
+            box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.3), -1px -1px 5px 1px rgba(150, 150, 150, 0.3); }
+          div.main-section div.blog-container aside div.search-container input::placeholder {
+            opacity: .6; }
+      div.main-section div.blog-container aside div.categories-count-container ul.categories-count {
+        font-weight: 100;
+        font-size: .95em; }
+        div.main-section div.blog-container aside div.categories-count-container ul.categories-count li.category-count {
+          margin-bottom: 15px; }
+    div.main-section div.blog-container div.posts-container {
+      width: 750px; }
+      div.main-section div.blog-container div.posts-container div.post-item div.post-infos {
+        display: flex; }
 
 /*# sourceMappingURL=blog.css.map */

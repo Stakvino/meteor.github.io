@@ -83,7 +83,7 @@ div.select-slides-container {
   div.select-slides-container button.select-slide-control {
     background-color: darkgray;
     width: 13px;
-    height: 13px;
+    height: 15px;
     border: darkgray solid 1px;
     border-radius: 50%;
     margin: 0 5px;
@@ -97,6 +97,12 @@ div.select-slides-container {
 html {
   font-family: "Montserrat";
   color: #414141; }
+
+:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
 
 input,
 textarea,
@@ -957,8 +963,7 @@ footer {
             text-align: center;
             margin-bottom: 20px; } }
         footer div.footer-content-row div.footer-infos div.footer-info-item p {
-          margin-bottom: 10px;
-          text-align: justify; }
+          margin-bottom: 10px; }
           @media screen and (max-width: 1200px) {
             footer div.footer-content-row div.footer-infos div.footer-info-item p {
               text-align: left; } }
