@@ -1,0 +1,32 @@
+div.award-item{
+  @media screen and (max-width: $third-break){
+    margin-bottom: 40px;
+  }
+  h4{
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  div.progress-container{
+    width: 358px;
+    background-color: $light-gray;
+    border: $medium-gray solid 1px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 10px 0 $medium-gray;
+    @media screen and (max-width: $first-break){
+      width: 293px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 220px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 100%;
+    }
+    div.progress-bar{
+      color: white;
+      font-size: .9em;
+      padding: 5px 0;
+      text-align: center;
+    }
+  }
+}

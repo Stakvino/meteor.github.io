@@ -1,5 +1,5 @@
-@import url(vendor/normalize.css);
-@import url(vendor/font-awesome.min.css);
+@import url(../vendor/normalize.css);
+@import url(../vendor/font-awesome.min.css);
 #slick_nav_jquery_jqia {
   width: 100%;
   background-color: inherit;

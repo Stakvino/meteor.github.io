@@ -1,0 +1,16 @@
+div.featured-work-section{
+  padding-top: 70px;
+  div.featured-work-container{
+    width: 100%;
+    div.featured-work-items{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      @media screen and (max-width: $second-break){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
+      @import "../components/feature-item";
+    }
+  }
+}

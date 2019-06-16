@@ -1,0 +1,47 @@
+div.testimonial-item{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $third-break){
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  p{
+   border-radius: 5px;
+   background-color: white;
+   font-size: .82em;
+   padding: 30px 20px;
+    text-align: center;
+    @media screen and (max-width: 480px){
+      padding: 20px;
+    }
+    @media screen and (max-width: 360px){
+      height: 150px;
+      overflow-y: scroll;
+    }
+  }
+  img.client-img{
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    @media screen and (max-width: 420px){
+      width: 80px;
+    }
+  }
+  span.client-name{
+    margin: 5px 0;
+    @media screen and (max-width: 420px){
+      font-size: .9em;
+    }
+  }
+  span.client-job{
+    margin-bottom: 20px;
+    font-size: .9em;
+    color: white;
+    @media screen and (max-width: 420px){
+      font-size: .9em;
+    }
+  }
+}

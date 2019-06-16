@@ -1,0 +1,40 @@
+div.testimonials-section{
+  padding: 60px 0;
+  background-image: url("../img/testimonials-bg.jpg");
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+  div.testimonials-container{
+    width: 1170px;
+    margin: 0 auto;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+    }
+    div.testimonial-slider{
+      height: 415px;
+      @media screen and (max-width: $third-break){
+        height: 750px;
+      }
+      @media screen and (max-width: 620px){
+        height: 800px;
+      }
+      div.testimonial-slide{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $first-break){
+          justify-content: space-around;
+        }
+        @media screen and (max-width: $third-break){
+          flex-direction: column;
+        }
+        @import "../components/testimonial-item";
+      }
+    }
+  }
+}

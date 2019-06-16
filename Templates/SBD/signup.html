@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sign up</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="styles/signup.css">
+  </head>
+  
+  <body>
+    <h2>Sign up</h2>
+    <form action="create_account.php" method="post">
+    <div class="input-container input-pseudo">
+        <div class="input-item">
+          <label for="">Pseudo : </label>
+          <input type="text" name="pseudo" 
+          <?php 
+          if(isset($_GET["pseudo-error"])){ echo 'class="error-border"';}
+          if(isset($_GET["pseudo"])){ echo " value =\"".$_GET["pseudo"].'"';}
+          ?>>
+        </div>
+        <div class="error-message">
+        <?php if(isset($_GET["pseudo-error"])){ echo $_GET["pseudo-error"]; }?>
+        </div>
+      </div>
+      <div class="input-container  input-password">
+        <div class="input-item">
+          <label for="">Password : </label>
+          <input type="password" name="password"
+          <?php 
+            if(isset($_GET["password-error"])){ echo 'class="error-border"';}
+            if(isset($_GET["password"])){ echo 'value='.$_GET["password"];}
+          ?>>    
+        </div>
+        <div class="error-message">
+        <?php if(isset($_GET["password-error"])){ echo $_GET["password-error"]; }?>
+        </div>
+      </div>
+      <div class="input-container  input-retype-password">
+        <div class="input-item">
+          <label for="">Retype Password : </label>
+          <input type="password" name="retype-password"
+          <?php 
+            if(isset($_GET["retype-password-error"])){ echo 'class="error-border"';}
+            if(isset($_GET["retype-password"])){ echo 'value='.$_GET["retype-password"];}
+          ?>> 
+        </div>
+        <div class="error-message">
+        <?php if(isset($_GET["retype-password-error"])){ echo $_GET["retype-password-error"]; }?>
+        </div>
+      </div>
+      <div class="input-container input-email">
+        <div class="input-item">
+          <label for="">Email : </label>
+          <input type="email" name="email"
+          <?php 
+            if(isset($_GET["email-error"])){ echo 'class="error-border"';}
+            if(isset($_GET["email"])){ echo 'value='.$_GET["email"];}
+          ?>>  
+        </div>
+        <div class="error-message">
+        <?php if(isset($_GET["email-error"])){ echo $_GET["email-error"]; }?>
+        </div>
+      </div>
+      <div class="submit-container">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </body>
+  
+</html>

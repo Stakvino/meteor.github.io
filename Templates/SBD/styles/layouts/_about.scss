@@ -1,0 +1,72 @@
+div.about-section{
+  padding: 70px 0;
+  div.about-container{
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+      flex-direction: column;
+    }
+    div.about-img{
+      
+      img{
+        @media screen and (max-width: $first-break){
+          width: 455px;
+        }
+        @media screen and (max-width: $second-break){
+          width: 345px;
+        }
+        @media screen and (max-width: $third-break){
+          width: 558px;
+        }
+        @media screen and (max-width: 590px){
+          width: 100%;
+        }
+      }
+    }
+    div.about-text-container{
+      width: 572px;
+      margin-left: 40px;
+      @media screen and (max-width: $first-break){
+        width: 485px;
+        margin-left: 20px;
+      }
+      @media screen and (max-width: $second-break){
+        width: 375px;
+      }
+      @media screen and (max-width: $third-break){
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+      }
+      h3{
+        font-size: 2em;
+        margin-top: 0;
+        margin-bottom: 10px;
+        @media screen and (max-width: $third-break){
+          text-align: center;
+        }
+      }
+      p{
+        margin-bottom: 20px;
+        font-size: .9em;
+        font-family: "open sans";
+        @media screen and (max-width: $third-break){
+          text-align: center;
+        }
+      }
+    }
+  }
+}

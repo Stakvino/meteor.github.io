@@ -1,0 +1,29 @@
+div.blog-section{
+  padding: 70px 0;
+  background-color: $light-gray;
+  div.blog-container{
+    width: 1172px;
+    margin: 0 auto;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+    }
+    div.blogs-items{
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: $first-break){
+        justify-content: space-around;
+      }
+      @media screen and (max-width: $third-break){
+        flex-direction: column;
+        justify-content: center;
+      }
+      @import "../components/blog-item";
+    }
+  }
+}
