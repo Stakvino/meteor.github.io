@@ -1,0 +1,62 @@
+div.contact-section{
+  padding: 70px 0;
+  div#contact_map{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: grey;
+  }
+  div.contact-container{
+    width: 1170px;
+    margin: 0 auto;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+    }
+    h4{
+      font-size: 1.1em;
+      @media screen and (max-width: $third-break){
+        text-align: center;
+      }
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      input,textarea{
+        padding: 8px 20px;
+        font-size: .9em;
+        &::placeholder{
+          font-size: .9em;
+          color: rgba(150, 150, 150, .9);
+        }
+      }
+      div.input-container{
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $first-break){
+          flex-direction: column;
+        }
+        input{
+          width: 330px;
+          @media screen and (max-width: $first-break){
+            width: auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      textarea{
+        margin-bottom: 20px;
+        resize: none;
+        height: 370px;
+      }
+      button{
+        align-self: baseline;
+      }
+    }
+  }
+}

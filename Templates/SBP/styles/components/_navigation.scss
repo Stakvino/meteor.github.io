@@ -1,0 +1,68 @@
+#slick_nav_jquery_jqia{
+  @media screen and (max-width: $third-break){
+    display: block;
+  }
+}
+nav{
+  width: 100%;
+  padding: 10px 0;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  @media screen and (max-width: $first-break){
+
+  }
+  @media screen and (max-width: $third-break){
+
+  }
+  div.nav-container{
+    width: 1140px;
+    margin: 0 auto;
+    @media screen and (max-width: $first-break){
+
+    }
+    @media screen and (max-width: $third-break){
+
+    }
+    #logo{
+      @media screen and (max-width: $first-break){
+      }
+      @media screen and (max-width: $third-break){
+      }
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: $third-break){
+
+      }
+      li:not(.header-logo){
+        transition: background-color .4s ease-out;
+        background-color: $dark-blue;
+        display:block;
+        flex:1;
+        a{
+          font-size: 1em;
+          font-weight: bold;
+          color: white;
+          text-align: center;
+          padding: 15px 0;
+          display:block;
+          @media screen and (max-width: $first-break){
+          }
+        }
+      }
+      li:not(.header-logo):hover{
+        background-color: $main-blue;
+      }
+      li.header-logo{
+        img{
+          border-radius: 10px;
+          margin: 0 5ps;
+        }
+      }
+    }
+  }
+}

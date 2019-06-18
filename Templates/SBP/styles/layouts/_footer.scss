@@ -1,0 +1,69 @@
+footer{
+  color: white;
+  background-color: #1e2351;
+  div.footer-container{
+    width: 90%;
+    padding: 50px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    div{
+      width: 20%;
+      color: rgba(255, 255, 255, 0.8);
+      h4{
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: .85em;
+      }
+    }
+    div.service-areas{
+      img{
+        border-radius: 15px;
+      }
+      p{
+        margin-top: 15px;
+      }
+      div.social-media{
+        display: flex;
+        margin-top: 15px;
+        a{
+          color: white;
+          background-color: #757575;
+          border-radius: 50%;
+          font-size: 1.2em;
+          margin-left: 10px;
+          i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    div.operation-hours,div.site-plan{
+      li{
+        margin-bottom: 10px;
+      }
+    }
+    div.site-plan{
+      li a{
+        color: rgba(255, 255, 255, 0.8);
+        transition: color .4s;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+  div.right-reserved{
+    background-color: #000033;
+    padding: 15px 0;
+    font-size: .9em;
+    p{
+      text-align: center;
+    }
+  }
+}

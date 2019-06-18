@@ -1,0 +1,46 @@
+div.header-slider{
+  width: 100%;
+  @media screen and (max-width: $first-break){
+    margin-top: 92.7px;
+  }
+  @media screen and (max-width: $third-break){
+    margin-top: 58px;
+  }
+  div.slide{
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+    div.slide-caption{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media screen and (max-width: $third-break){
+        width: 90%;
+      }
+      h2{
+        text-align: center;
+        color: $dark-blue;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 15px;
+        padding: 15px 30px;
+        font-size: 2.5em;
+        margin-bottom: 25px;
+        @media screen and (max-width: 880px){
+          font-size: 2em;
+        }
+        @media screen and (max-width: $third-break){
+          margin-top: 15px;
+          font-size: 1.5em;
+        }
+        @media screen and (max-width: 690px){
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}
