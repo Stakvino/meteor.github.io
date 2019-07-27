@@ -1,8 +1,8 @@
-$nav-selectedColor : #49505f;
+$nav-selectedColor : #000033;
 
 #slick_nav_jquery_jqia{
   width: 100%;
-  background-color: inherit;
+  background-color: #1e2351;
   position: fixed;
   display: none;
   z-index: 99999;
@@ -13,7 +13,7 @@ $nav-selectedColor : #49505f;
     margin: 0 auto;
   }
   button.slick-nav-but{
-    background-color: #333333;
+    background-color: #000033;
     width: 45px;
     height: 35px;
     border: none;
@@ -52,7 +52,8 @@ $nav-selectedColor : #49505f;
     transition: background-color .5s;
     a{
       padding: 15px 0;
-      color: rgb(150, 150, 150);
+      color: white;
+      text-align: center;
       font-family: sans-serif;
       transition: background-color .3s;
       padding-left: 10px;

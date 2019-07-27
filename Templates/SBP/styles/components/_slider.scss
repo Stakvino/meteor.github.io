@@ -1,17 +1,16 @@
 div.header-slider{
   width: 100%;
-  @media screen and (max-width: $first-break){
-    margin-top: 92.7px;
-  }
-  @media screen and (max-width: $third-break){
-    margin-top: 58px;
+  @media screen and (max-width: 1000px){
+    margin-top: 105px;
   }
   div.slide{
+    width: 100%;
     img{
       width: 100%;
       vertical-align: top;
     }
     div.slide-caption{
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,21 +23,35 @@ div.header-slider{
       }
       h2{
         text-align: center;
-        color: $dark-blue;
-        background-color: rgba(255, 255, 255, 0.5);
+        color: #1e2351;
+        background-color: rgba(255, 255, 255, 0.8);
         border-radius: 15px;
-        padding: 15px 30px;
-        font-size: 2.5em;
+        border: solid 5px #1e2351;
+        padding: 25px 30px;
+        font-size: 3em;
         margin-bottom: 25px;
-        @media screen and (max-width: 880px){
-          font-size: 2em;
+        max-width: 90%;
+        @media screen and (max-width: 990px){
+          font-size: 2.6em;
         }
-        @media screen and (max-width: $third-break){
-          margin-top: 15px;
+        @media screen and (max-width: 870px){
+          font-size: 2.2em;
+        }
+        @media screen and (max-width: 550px){
+          font-size: 1.9em;
+          padding: 5px 10px;
+        }
+        @media screen and (max-width: 450px){
+          font-size: 1.7em;
+        }
+        @media screen and (max-width: 400px){
           font-size: 1.5em;
         }
-        @media screen and (max-width: 690px){
-          font-size: 1.3em;
+        @media screen and (max-width: 350px){
+          font-size: 1.2em;
+        }
+        @media screen and (max-width: 270px){
+          font-size: 1em;
         }
       }
     }

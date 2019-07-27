@@ -111,6 +111,9 @@ require('./jquery.jqia.scrollTo.js');
      });
      */
    });
+   //console.log();
+   
+   //$linksCollection.eq(1).addClass("selected-link");
    
    var changeLinkHighlight = function($navBarLink, $slickNavLink){
      $(".selected-link", $navBar).removeClass("selected-link");
@@ -120,19 +123,18 @@ require('./jquery.jqia.scrollTo.js');
    }
    var $slickNavLinks = $linksContainer.children();
    //clicking on links will give them the selected-link that highlight background 
-   $linksCollection.filter(`[href="#"]`).click(function(){
+   $linksCollection.filter(`[href]`).click(function(){
      var $barNavLink = $(this);
      var $slickNavLink = $slickNavLinks.eq($linksCollection.index($barNavLink)).addClass("selected-link");
      changeLinkHighlight($barNavLink, $slickNavLink);
    });
-   $slickNavLinks.filter(`[href="#"]`).click(function(){
+   $slickNavLinks.filter(`[href]`).click(function(){
      var $slickNavLink = $(this);
      var $barNavLink = $linksCollection.eq($slickNavLinks.index($slickNavLink)).addClass("selected-link");
      changeLinkHighlight($barNavLink, $slickNavLink);
    });
    
    $slickNavDOM.prependTo(document.body);
-
    return this;
  };
 
