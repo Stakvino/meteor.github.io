@@ -1,4 +1,4 @@
-var jQuery = require('./../vendor/jquery-1.12.0.min.js');
+//var jQuery = require('./../vendor/jquery-1.12.0.min.js');
 
 (function($){
   const defaults = {
@@ -7,16 +7,16 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
     autoPlayDelay : 4000
   };
   
-  let   $sliderContainer;
+  let   $sliderContainer = null;
   const $arrowLeft = $("span.arrow.left", $sliderContainer);
   const $arrowRight = $("span.arrow.right", $sliderContainer);
   const $slider = $("div.slider-center", $sliderContainer);
   const $slides = $("div.slide-center", $slider);
-  
+
   let timerId = null;
   let isAnimated = false;
   let autoPlayIsRunning = true;
-  
+
   function next(options){
     const selected = $("div.slider-center").find(".selected");
     const isLastElement = !selected.next().next().length;
@@ -67,12 +67,12 @@ var jQuery = require('./../vendor/jquery-1.12.0.min.js');
   const methods = {
     init: function(options) {
       options = $.extend(defaults, options);
+
       $slides.eq(1).addClass("selected")
       $slides.each(function(index){
         const position = index * 33.33;
         $(this).css("left", position + "%");
       });
-      
       $slides.css("transition", "transform " + options.delay/1000 + "s");
       
       function moveRight(){

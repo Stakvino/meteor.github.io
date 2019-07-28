@@ -1,0 +1,19 @@
+@import "../base/variables";
+@import "../base/reset";
+@import "../base/classes";
+@import "../components/buttons";
+@import "../components/navigation";
+
+div.main{
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1{
+    font-size: 4em;
+    color: $main-blue;
+    text-align: center;
+  }
+}
+
+@import "../layouts/footer";

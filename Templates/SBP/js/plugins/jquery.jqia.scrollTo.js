@@ -1,4 +1,4 @@
-var jQuery = require('./../vendor/jquery-1.12.0.min.js');
+//var jQuery = require('./../vendor/jquery-1.12.0.min.js');
 
 (function($) {
 

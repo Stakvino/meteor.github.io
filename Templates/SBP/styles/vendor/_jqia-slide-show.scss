@@ -24,8 +24,9 @@ div.select-slides-container{
   @media screen and (max-width: 600px){
     margin-bottom: 10px;
   }
+
   button.select-slide-control{
-    background-color: darkgray;
+    background-color: #1e2351;
     width: 13px;
     height: 13px;
     border: darkgray solid 1px;
@@ -37,7 +38,7 @@ div.select-slides-container{
     }
   }
   button.selected-slide-control{
-    background-color: rgb(50,50,50);
+    background-color: #000033;
     transform: scale(1.3);
   }
 }

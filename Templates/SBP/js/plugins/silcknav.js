@@ -1,5 +1,4 @@
-/*var jQuery = require('./../vendor/jquery-1.12.0.min.js');
-require('./jquery.jqia.scrollTo.js');*/
+
 
 (function($) {
    
