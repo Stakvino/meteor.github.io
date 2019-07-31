@@ -1,0 +1,124 @@
+
+  $break : 750px;
+
+  img{
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  div.slider-container-center{
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+      margin-top: 80px;
+    }
+    div.slider-center{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+			div.slide-center{
+        width: 33%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+        position: absolute;
+        background-color: white;  
+        &:hover{
+				  cursor: pointer;
+        }
+				&:not(.selected){
+          transform: scale(0.6);
+          @media screen and (max-width: $break){
+            transform:scale(.4);
+          }  
+				}
+				&:not(.selected):hover{
+          transform:scale(.8);
+          @media screen and (max-width: $break){
+            transform:scale(.6);
+          }  
+        }
+        &.selected{
+          @media screen and (max-width: $break){
+            transform:scale(1.2);
+          }  
+        }
+				&.selected:hover{
+          transform:scale(1.1);
+          @media screen and (max-width: $break){
+            transform:scale(1.4);
+          }  
+				}
+				div.product-details{
+          width: 70%;
+          padding:20px 15px 60px 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, .1),
+                    -1px -1px 15px 0px rgba(0, 0, 0, .1);
+          @media screen and (max-width: $break){
+            padding:20px 10px 20px 10px;
+            width: 50%;
+          }
+          @media screen and (max-width: 780px){
+            width: 80%;
+          }        
+          img{
+            width: 120px;
+            margin: 10px 10px 30px 10px;
+            @media screen and (max-width: 1100px){
+              width: 100px;
+            }
+            @media screen and (max-width: 580px){
+              width: 80px;
+            }
+            @media screen and (max-width: 520px){
+              width: 70px;
+            }
+            @media screen and (max-width: 450px){
+              width: 60px;
+            }
+          }
+          h2{
+            font-size: 1.3em;
+            text-align: center;
+            @media screen and (max-width: $break){
+              font-size: 1em;
+            }
+            @media screen and (max-width: 600px){
+              font-size: .9em;
+            }
+            @media screen and (max-width: 420px){
+              font-size: .85em;
+            }
+            @media screen and (max-width: 360px){
+              font-size: .8em;
+            }
+          }
+        }
+			}
+		}
+		span.arrow{
+      font-size: 10vw;
+      //transform: rotate(90deg);
+			cursor: pointer;
+			color: #1e2351;
+			transition: color .3s,transform .3s;
+			&:hover{
+			color: #000033;
+        //transform: rotate(90deg) scale(1.2);
+        transform: scale(1.2);
+			}
+		}
+  }

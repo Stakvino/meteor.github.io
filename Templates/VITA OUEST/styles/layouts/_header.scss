@@ -1,0 +1,17 @@
+header{
+  background-color: $logo-blue;
+  padding: 5px 0;
+  div.header-container{
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a.logo{
+
+    }
+    div.contact-header{
+      color: white;
+    }
+  }
+}

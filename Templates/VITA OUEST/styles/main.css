@@ -1,0 +1,449 @@
+@import "vendor/normalize.css";
+@import "vendor/jqia-slick-nav.css";
+@import "vendor/jqia-slide-show.css";
+@import "vendor/jqia-center-slide.css";
+@import "vendor/jqia-center-slide.css";
+@import "vendor/font-awesome/all.css";
+html {
+  font-family: "Montserrat";
+  color: #414141;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 25px;
+}
+
+h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul.nav-links-container {
+  text-transform: uppercase;
+}
+
+.white-nav-bar {
+  background-color: #0c3958;
+}
+
+.black-nav-bar {
+  background-color: #f0f0f0;
+}
+
+.rotate-bolt {
+  transform: rotate(-180deg);
+}
+
+div.fix-bolt {
+  position: absolute;
+}
+div.fix-bolt.top-right {
+  top: 0;
+  right: 0;
+}
+div.fix-bolt.top-left {
+  top: 0;
+  left: 0;
+}
+div.fix-bolt.bot-right {
+  bottom: 0;
+  left: 0;
+}
+div.fix-bolt.bot-left {
+  bottom: 0;
+  right: 0;
+}
+div.fix-bolt.top-middle {
+  top: -30px;
+  left: 45%;
+}
+div.fix-bolt.bottom-middle {
+  bottom: 0;
+  left: 40%;
+}
+
+header {
+  background-color: #0c3958;
+  padding: 5px 0;
+}
+header div.header-container {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div.header-container div.contact-header {
+  color: white;
+}
+
+footer {
+  background-color: #0c3958;
+  color: white;
+}
+footer div.footer-container {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+footer div.footer-container div.icon {
+  margin-bottom: 25px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div.footer-container div.icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c3958;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+footer div.footer-container h4 {
+  font-size: 1.5em;
+}
+footer div.footer-container h5 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+footer div.footer-container p, footer div.footer-container address {
+  font-size: 1em;
+  font-weight: bold;
+}
+footer div.footer-container > div {
+  display: flex;
+  width: 50%;
+}
+footer div.footer-container > div > div {
+  padding: 30px 10px;
+}
+footer div.footer-container div.contact-heures {
+  text-align: center;
+  position: relative;
+  width: 60%;
+}
+footer div.footer-container div.contact-heures div.contact {
+  width: 50%;
+  padding-right: 70px;
+  background-color: #ef3739;
+}
+footer div.footer-container div.contact-heures div.contact *::selection {
+  background: #0c3958;
+}
+footer div.footer-container div.contact-heures div.contact div.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer div.footer-container div.contact-heures div.contact div.container > div {
+  padding: 10px 15px;
+}
+footer div.footer-container div.contact-heures div.contact div.container div.adress {
+  grid-column: 1/span 2;
+  grid-row: 1;
+  border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+  margin-bottom: 20px;
+}
+footer div.footer-container div.contact-heures div.contact div.container div.phone {
+  grid-column: 1/1span;
+  grid-row: 2;
+  border-right: rgba(255, 255, 255, 0.5) solid 1px;
+}
+footer div.footer-container div.contact-heures div.contact div.container div.fax {
+  grid-column: 1/1span;
+  grid-row: 2;
+}
+footer div.footer-container div.contact-heures div.contact div.container div.email {
+  grid-column: 1/span 2;
+  grid-row: 4;
+  margin-top: 20px;
+  border-top: rgba(255, 255, 255, 0.5) solid 1px;
+}
+footer div.footer-container div.contact-heures div.heures {
+  background: url("../img/background/5.jpg") center;
+  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  float: left;
+  margin-left: -5%;
+  height: 68%;
+  align-self: center;
+  position: absolute;
+  width: 300px;
+  right: 0;
+}
+footer div.footer-container div.contact-heures div.heures div.icon i {
+  background-color: #a3a2c7;
+  color: #0c3958;
+}
+footer div.footer-container div.contact-heures div.heures h4 {
+  margin: 0 0 0 20px;
+}
+footer div.footer-container div.contact-heures div.heures p {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+footer div.footer-container div.contact-heures div.heures div.main-hours {
+  margin: 0 auto;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+  width: 80%;
+}
+footer div.footer-container div.plan-media {
+  width: 40%;
+}
+footer div.footer-container div.plan-media div.plan {
+  width: 62%;
+  padding-left: 50px;
+}
+footer div.footer-container div.plan-media div.plan h4 {
+  margin-bottom: 20px;
+}
+footer div.footer-container div.plan-media div.plan ul {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+footer div.footer-container div.plan-media div.plan ul li {
+  font-size: 1.2em;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+footer div.footer-container div.plan-media div.plan ul li:hover i, footer div.footer-container div.plan-media div.plan ul li:hover a {
+  color: #ef3739;
+}
+footer div.footer-container div.plan-media div.plan ul li i {
+  margin-right: 10px;
+  transition: color 0.5s;
+}
+footer div.footer-container div.plan-media div.plan ul li a {
+  color: #a3a2c7;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+footer div.footer-container div.plan-media div.logo-media {
+  width: 198px;
+}
+footer div.footer-container div.plan-media div.logo-media div.logo {
+  margin-bottom: 35px;
+}
+footer div.footer-container div.plan-media div.logo-media div.media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 45px 0;
+  background: url("../img/background/5.jpg") center;
+  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
+}
+footer div.footer-container div.plan-media div.logo-media div.media a {
+  color: #0c3958;
+  background-color: #a3a2c7;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  transition: color 0.5s, background-color 0.5s;
+}
+footer div.footer-container div.plan-media div.logo-media div.media a:hover {
+  color: white;
+  background-color: #ef3739;
+}
+footer div.footer-container div.plan-media div.logo-media div.media div.fix-bolt.top-middle {
+  top: 0;
+  left: 40%;
+}
+
+div.slide-button {
+  display: inline-block;
+  margin-top: 60px;
+}
+div.slide-button a {
+  background-color: #0c3958;
+  color: white;
+  padding: 15px 0;
+  width: 290px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+div.slide-button a:hover {
+  background-color: #ef3739;
+}
+
+@media screen and (max-width: 860px) {
+  #slick_nav_jquery_jqia {
+    display: block;
+  }
+}
+
+nav div.nav-container {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+nav div.nav-container ul {
+  display: flex;
+}
+nav div.nav-container ul li {
+  display: flex;
+}
+nav div.nav-container ul li.drop-down-p {
+  position: relative;
+}
+nav div.nav-container ul li.drop-down-p img.drop-down-bolt {
+  position: absolute;
+  transition: transform 0.5s;
+}
+nav div.nav-container ul li.drop-down-p img.right {
+  right: 0;
+}
+nav div.nav-container ul li.drop-down-p img.left {
+  left: 0;
+}
+nav div.nav-container ul li a {
+  color: white;
+  width: 160px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.5s;
+}
+nav div.nav-container ul li a.selected {
+  background-color: #ef3739;
+}
+nav div.nav-container ul li a:hover {
+  background-color: #ef3739;
+}
+nav div.nav-container ul.drop-down-list {
+  flex-direction: column;
+  position: absolute;
+  left: -10px;
+  top: 100%;
+  background-color: #0c3958;
+}
+nav div.nav-container ul.drop-down-list li a {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.header-slider div.slide-caption {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+div.header-slider div.slide-caption h2 {
+  color: white;
+  font-size: 8vw;
+  text-shadow: 3px 3px #030809;
+}
+
+div.header-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+div.main {
+  padding: 40px 0;
+}
+div.main div.container {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+div.main div.container div.categories {
+  width: 240px;
+  position: relative;
+  background: url("../img/background/5.jpg") center;
+  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
+}
+div.main div.container div.categories h4 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+div.main div.container div.categories ul li {
+  margin-bottom: 15px;
+}
+div.main div.container div.categories ul li a {
+  color: white;
+  font-size: 1.2em;
+}
+div.main div.container div.products {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(auto-fit);
+}
+div.main div.container div.products div.product-item {
+  border: rgba(0, 0, 0, 0.2) solid 1px;
+  padding: 10px;
+  transition: border-color 0.5s;
+}
+div.main div.container div.products div.product-item:hover {
+  border-color: black;
+}
+div.main div.container div.products div.product-item h5 {
+  color: #242424;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+div.main div.container div.products div.product-item a {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main.css.map */

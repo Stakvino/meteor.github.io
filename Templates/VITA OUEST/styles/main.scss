@@ -1,0 +1,20 @@
+@import "vendor/normalize.css";
+@import "vendor/jqia-slick-nav.css";
+@import "vendor/jqia-slide-show.css";
+@import "vendor/jqia-center-slide.css";
+@import "vendor/jqia-center-slide.css";
+@import "vendor/font-awesome/all.css";
+
+@import "base/variables";
+@import "base/base";
+@import "base/fonts";
+@import "base/classes";
+
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "components/buttons";
+@import "components/navigation";
+@import "components/slider";
+
+@import "pages/home";

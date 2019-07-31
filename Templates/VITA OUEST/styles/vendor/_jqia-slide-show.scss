@@ -1,0 +1,51 @@
+$main-color : #000033;
+$second-color : #1e2351;
+$border-color : darkgray;
+
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  .fade-translate{
+    position: relative;
+  }
+}
+.slider-item{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+div.controls-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("../../img/background/1.jpg");
+  background-size: contain;
+  background-position: center;
+  border-top: #0c3958 solid 4px;
+}
+div.select-slides-container{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  @media screen and (max-width: 600px){
+    margin-bottom: 10px;
+  }
+
+  div.select-slide-control{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: transform .5s;
+    background-image: url("../../img/bolts\ and\ nuts/slider-bolt.png");
+    background-size: cover;
+    background-position:center;
+    &:focus{
+      outline: none;
+    }
+  }
+  div.selected-slide-control{
+    transform: scale(1.3) rotate(-180deg);
+  }
+}

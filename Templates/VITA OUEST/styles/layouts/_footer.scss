@@ -1,0 +1,194 @@
+footer{
+  background-color: $logo-blue;
+  color: white;
+  div.footer-container{
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    div.icon{
+      margin-bottom: 25px;
+      font-size: .9em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $logo-blue;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+    h4{
+      font-size: 1.5em;
+    }
+    h5{
+      font-size: 1em;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    p,address{
+      font-size: 1em;
+      font-weight: bold;
+    }
+    > div{
+      display: flex;
+      width: 50%;
+      > div{
+        padding: 30px 10px;
+      }
+    }
+    div.contact-heures{
+      text-align: center;
+      position: relative;
+      width: 60%;
+      div.contact{
+        width: 50%;
+        padding-right: 70px;
+        background-color: $logo-red;
+        *::selection{
+          background: $logo-blue;
+        }
+        div.container{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          > div{
+            padding: 10px 15px;
+          }
+          div.adress{
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            border-bottom: rgba(255, 255, 255, .5) solid 1px;
+            margin-bottom: 20px;
+          }
+          div.phone{
+            grid-column: 1 / 1span;
+            grid-row: 2;
+            border-right: rgba(255, 255, 255, .5) solid 1px;
+          }
+          div.fax{
+            grid-column:1 / 1span;
+            grid-row: 2;
+          }
+          div.email{
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            margin-top: 20px;
+            border-top: rgba(255, 255, 255, .5) solid 1px;
+          }
+        } 
+      }
+      div.heures{
+        background: url("../img/background/5.jpg") center;
+        box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, .1),
+                    -1px -1px 15px 15px rgba(0, 0, 0, .1);
+        width: 40%;
+        float: left;
+        margin-left: -5%;
+        height: 68%;
+        align-self: center;
+        position: absolute;
+        width: 300px;
+        right: 0;
+        div.icon{
+          i{
+            background-color: rgb(163, 162, 199);
+            color: $logo-blue;
+          }
+        }
+        h4{
+          margin: 0 0 0 20px;
+        }
+        p{
+          font-size: 1.6em;
+          margin-bottom: 10px;
+        }
+        div.main-hours{
+          margin: 0 auto;
+          padding: 20px 0;
+          margin-bottom: 20px;
+          border-bottom: rgba(255, 255, 255, .5) solid 1px;
+          width: 80%;
+        }
+        div.exeption{
+
+        }
+      }
+    }
+    div.plan-media{
+      width: 40%;
+      div.plan{
+        width: 62%;
+        padding-left: 50px;
+        h4{
+          margin-bottom: 20px;
+        }
+        ul{
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          li{
+            font-size: 1.2em;
+            display: inline-block;
+            margin-bottom: 15px;
+            &:hover{
+              i,a{
+                color: $logo-red;
+              }
+            }
+            i{
+              margin-right: 10px;
+              transition: color .5s;
+            }
+            a{
+              color: rgb(163, 162, 199);
+              font-weight: bold;
+              transition: color .5s;
+            }
+          }
+        }
+      }
+      div.logo-media{
+        width: 198px;
+        div.logo{
+          margin-bottom: 35px;
+        }
+        div.media{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          padding: 45px 0;
+          background: url("../img/background/5.jpg") center;
+          box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, .1),
+                    -1px -1px 15px 15px rgba(0, 0, 0, .1);
+          a{
+            color: $logo-blue;
+            background-color: rgb(163, 162, 199);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            transition: color .5s , background-color .5s;
+            &:hover{
+              color: white;
+              background-color : $logo-red;
+            }
+          }
+          div.fix-bolt.top-middle{
+            top: 0;
+            left: 40%;
+          }
+        }
+      }
+    }
+  }
+}

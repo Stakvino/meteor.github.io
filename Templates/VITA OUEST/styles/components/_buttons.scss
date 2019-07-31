@@ -1,0 +1,17 @@
+div.slide-button{
+  display: inline-block;
+  margin-top: 60px;  
+    a{
+      background-color: $logo-blue;
+      color: white;
+      padding: 15px 0;
+      width: 290px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color .5s;
+      &:hover{
+        background-color: $logo-red;
+      }
+    }
+}
