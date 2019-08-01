@@ -34,11 +34,14 @@ div.main{
                 display: flex;
                 font-weight: bold;
                 transition: background-color .5s;
+                align-items: center;
+                padding: 15px 20px;
                 &:hover{
                   background-color: $logo-red;
                 }
-                align-items: center;
-                padding: 15px 20px;
+                &.selected{
+                  background-color: $logo-red;
+                }
                 img{
                   background-color: white;
                   border-radius: 50%;
