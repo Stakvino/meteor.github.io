@@ -1,6 +1,5 @@
 @import "vendor/normalize.css";
 @import "vendor/jqia-slick-nav.css";
-@import "vendor/jqia-slide-show.css";
 @import "vendor/font-awesome/all.css";
 html {
   font-family: "Montserrat";
@@ -298,24 +297,6 @@ footer div.footer-container div.plan-media div.logo-media div.media div.fix-bolt
   left: 40%;
 }
 
-div.slide-button {
-  display: inline-block;
-  margin-top: 60px;
-}
-div.slide-button a {
-  background-color: #0c3958;
-  color: white;
-  padding: 15px 0;
-  width: 290px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.5s;
-}
-div.slide-button a:hover {
-  background-color: #ef3739;
-}
-
 @media screen and (max-width: 860px) {
   #slick_nav_jquery_jqia {
     display: block;
@@ -377,76 +358,12 @@ nav div.nav-container ul.drop-down-list li a {
   justify-content: space-between;
 }
 
-div.header-slider div.slide-caption {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-div.header-slider div.slide-caption h2 {
-  color: white;
-  font-size: 8vw;
-  text-shadow: 3px 3px #030809;
-}
-
-div.header-slide {
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 div.main {
   padding: 80px 0;
 }
 div.main div.container {
   width: 1170px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-div.main div.container div.categories {
-  width: 240px;
-  position: relative;
-  background: url("../img/background/5.jpg") center;
-  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
-  padding: 60px 20px;
-}
-div.main div.container div.categories h4 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 1.2em;
-}
-div.main div.container div.categories ul li {
-  margin-bottom: 15px;
-}
-div.main div.container div.categories ul li a {
-  color: white;
-  font-size: 1.2em;
-}
-div.main div.container div.products {
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(3, 240px);
-  grid-template-rows: repeat(auto-fit);
-}
-div.main div.container div.products div.product-item {
-  border: rgba(0, 0, 0, 0.2) solid 1px;
-  padding: 10px;
-  transition: border-color 0.5s;
-}
-div.main div.container div.products div.product-item:hover {
-  border-color: black;
-}
-div.main div.container div.products div.product-item h5 {
-  color: #242424;
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 40px;
-}
-div.main div.container div.products div.product-item a {
-  display: flex;
-  flex-direction: column;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=a-propos.css.map */
