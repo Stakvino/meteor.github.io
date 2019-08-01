@@ -1,11 +1,11 @@
 #slick_nav_jquery_jqia {
   width: 100%;
-  background-color: #1e2351;
+  background-color: #0c3958;
   position: fixed;
   display: none;
   z-index: 99999;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 770px) {
   #slick_nav_jquery_jqia {
     display: block;
   }
@@ -17,14 +17,14 @@
   margin: 0 auto;
 }
 #slick_nav_jquery_jqia button.slick-nav-but {
-  background-color: #000033;
+  background-color: #ef3739;
   width: 45px;
   height: 35px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   position: fixed;
-  top: 15px;
+  top: 10px;
   right: 15px;
 }
 #slick_nav_jquery_jqia button.slick-nav-but::-moz-focus-inner {
@@ -65,10 +65,10 @@
   text-transform: uppercase;
 }
 #slick_nav_jquery_jqia div.links-container a.selected-link {
-  background-color: #000033;
+  background-color: #ef3739;
 }
 #slick_nav_jquery_jqia div.links-container a:hover {
-  background-color: #000033;
+  background-color: #ef3739;
 }
 
 /*# sourceMappingURL=jqia-slick-nav.css.map */

@@ -1,17 +1,49 @@
 #slick_nav_jquery_jqia{
-  @media screen and (max-width: 860px){
+  @media screen and (max-width: $third-break){
     display: block;
   }
 }
 nav{
+  display: flex;
+  @media screen and (max-width: $third-break){
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+   }
   div.nav-container{
     width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    
+    a.logo{
+      width: 198px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        @media screen and (max-width: $second-break){
+          width: 160px;
+        }
+        @media screen and (max-width: $third-break){
+          width: 140px;
+        }
+      }
+    }
+    @media screen and (max-width: $first-break){
+      width: 970px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
     ul{
       display: flex;
+      @media screen and (max-width: $third-break){
+        display: none;
+      }
       li{
         display: flex;
         &.drop-down-p{
@@ -42,6 +74,10 @@ nav{
           &:hover{
             background-color: $logo-red;
           }
+          @media screen and (max-width: $second-break){
+            font-size: .9em;
+            width: 120px;
+          }
         }
       }
     }
@@ -49,14 +85,22 @@ nav{
       flex-direction: column;
       position: absolute;
       z-index: 999;
-      
       top: 100%;
       background-color: $logo-blue;
       li{
         a{
+          width: 160px;
           padding: 15px 10px;
           display: flex;
           justify-content: space-between;
+          @media screen and (max-width: $second-break){
+            font-size: .9em;
+          }
+          img{
+            @media screen and (max-width: $second-break){
+              width: 30px;
+            }
+          }
         }
       }
     }

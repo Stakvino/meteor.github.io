@@ -1,12 +1,12 @@
-$nav-selectedColor : #000033;
-
+$nav-selectedColor : #ef3739;
+$logo-blue: #0c3958;
 #slick_nav_jquery_jqia{
   width: 100%;
-  background-color: #1e2351;
+  background-color: #0c3958;
   position: fixed;
   display: none;
   z-index: 99999;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 770px){
     display: block;
   }
   div.slick-nav-container{
@@ -16,14 +16,14 @@ $nav-selectedColor : #000033;
     margin: 0 auto;
   }
   button.slick-nav-but{
-    background-color: #000033;
+    background-color: #ef3739;
     width: 45px;
     height: 35px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     position: fixed;
-    top: 15px;
+    top: 10px;
     right: 15px;
     &::-moz-focus-inner {
       border: 0;

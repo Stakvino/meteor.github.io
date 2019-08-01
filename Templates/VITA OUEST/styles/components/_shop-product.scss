@@ -4,7 +4,16 @@ div.product-item{
     position: relative;
     overflow: hidden;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     transition: border-color .5s;
+    @media screen and (max-width: $second-break){
+      padding: 10px 5px;
+    }
+    @media screen and (max-width: 340px){
+      width: 90%;
+      margin-bottom: 20px;
+    }
     &:hover{
       border-color: black;
       div.detail-layer{
@@ -15,6 +24,14 @@ div.product-item{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      div.product-pic img{
+        @media screen and (max-width: $second-break){
+          width: 100%;
+        }
+      }
       p.product-name{
         text-align: center;
         color: #242424;
@@ -22,6 +39,15 @@ div.product-item{
         word-wrap: break-word;
         width: 218px;
         text-align: center;
+        @media screen and (max-width: $second-break){
+          width: 100%;
+        }
+        @media screen and (max-width: 450px){
+          font-size: .9em;
+        }
+        @media screen and (max-width: 340px){
+          font-size: 1em;
+        }
       }
       div.detail-layer{
         color: white;

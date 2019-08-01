@@ -1,16 +1,65 @@
 div.main{
     padding: 80px 0;
+    h2{
+      text-align: center;
+      font-size: 4em;
+      margin-bottom: 60px;
+      @media screen and (max-width: 500px){
+        font-size: 3em;
+      }
+      @media screen and (max-width: 400px){
+        font-size: 2.5em;
+      }
+      @media screen and (max-width: 320px){
+        font-size: 2em;
+      }
+      @media screen and (max-width: 250px){
+        font-size: 1.5em;
+      }
+    }
     div.container{
         width: 1170px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        @media screen and (max-width: $first-break){
+          width: 970px;
+        }
+        @media screen and (max-width: $second-break){
+          width: 750px;
+        }
+        @media screen and (max-width: $third-break){
+          width: 95%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
         div.products{
             display: grid;
             grid-gap: 40px;
             grid-template-columns: repeat(3, 240px);
             grid-template-rows: repeat(auto-fit);
+            @media screen and (max-width: $first-break){
+              grid-template-columns: repeat(2, 260px);
+            }
+            @media screen and (max-width: $second-break){
+              grid-template-columns: repeat(2, 200px);
+            }
+            @media screen and (max-width: $third-break){
+              width: 95%;
+              grid-template-columns: repeat(2, 45%);
+              grid-gap: 30px;
+              margin-bottom: 60px;
+              justify-content: center;
+            }
+            @media screen and (max-width: 450px){
+              grid-gap: 15px;
+            }
+            @media screen and (max-width: 340px){
+              display: flex;
+              flex-direction: column;
+            }
             @import "../components/shop-product.scss";
         }
         div.categories{
@@ -18,6 +67,15 @@ div.main{
           color: white;
           flex: .9;
           padding-top: 30px;
+          @media screen and (max-width: $third-break){
+            width: 80%;
+          }
+          @media screen and (max-width: 450px){
+            width: 90%;
+          }
+          @media screen and (max-width: 400px){
+            width: 100%;
+          }
           h4{
             font-size: 1.4em;
             margin-bottom: 25px;
@@ -36,6 +94,12 @@ div.main{
                 transition: background-color .5s;
                 align-items: center;
                 padding: 15px 20px;
+                @media screen and (max-width: 340px){
+                  font-size: .9em;
+                }
+                @media screen and (max-width: 250px){
+                  font-size: .8em;
+                }
                 &:hover{
                   background-color: $logo-red;
                 }

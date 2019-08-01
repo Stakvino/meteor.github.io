@@ -1,17 +1,37 @@
 header{
   background-color: $logo-blue;
   padding: 5px 0;
+  @media screen and (max-width: $third-break){
+    display: none;
+  }
   div.header-container{
     width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    a.logo{
-
+    @media screen and (max-width: $first-break){
+      width: 970px;
     }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 95%;
+    }
+    @media screen and (max-width: 530px){
+      flex-direction: column;
+    }
+    div.logo a img{
+      @media screen and (max-width: $second-break){
+        width: 160px;
+    }
+  }
     div.contact-header{
       color: white;
+      @media screen and (max-width: 530px){
+        margin: 15px 0;
+      }
     }
   }
 }

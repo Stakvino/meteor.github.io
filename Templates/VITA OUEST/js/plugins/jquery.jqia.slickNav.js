@@ -23,13 +23,15 @@ require('./jquery.jqia.scrollTo.js');*/
    options = $.extend(true, {}, $.fn.jqiaSlickNav.defaults, options);
 
    //position the slicknav Button
-   var $slickContainer = $(".slick-nav-container", $slickNavDOM);
+   console.log(options.position);
+   
+   var $slickContainer = $(".slick-nav-container button.slick-nav-but", $slickNavDOM);
    if(options.position == "right"){
-     $slickContainer.css("align-items", "flex-end");
+     $slickContainer.css("right", "15px");
    }else if(options.position == "center"){
      $slickContainer.css("align-items", "center");
    }else if(options.position == "left"){
-     $slickContainer.css("align-items", "flex-start");
+     $slickContainer.css("left", "15px");
    }
 
    var $navBar = this;
@@ -37,7 +39,9 @@ require('./jquery.jqia.scrollTo.js');*/
    $(window).resize(function(){
      $slickNavDOM.css({top: $navBar.is(":hidden") ? 60 : $navBar.innerHeight()});
    }).trigger("resize");
-   var $linksCollection = $("a", $navBar);
+   var $linksCollection = $("ul", $navBar).eq(0).find("> li > a");
+   console.log($linksCollection);
+   
    //event hadlers for nav links
    /*
    $linksCollection.each(function(index){

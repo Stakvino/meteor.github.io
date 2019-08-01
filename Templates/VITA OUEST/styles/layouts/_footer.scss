@@ -5,6 +5,21 @@ footer{
     display: flex;
     width: 1170px;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $first-break){
+      width: 970px;
+      flex-direction: column;
+    }
+    @media screen and (max-width: $second-break){
+      width: 750px;
+    }
+    @media screen and (max-width: $second-break){
+      width: 95%;
+    }
+    @media screen and (max-width: 380px){
+      width: 100%;
+    }
     div.icon{
       margin-bottom: 25px;
       font-size: .9em;
@@ -38,16 +53,41 @@ footer{
       width: 50%;
       > div{
         padding: 30px 10px;
+        @media screen and (max-width: $second-break){
+          padding: 30px 0;
+        }
       }
     }
     div.contact-heures{
       text-align: center;
       position: relative;
+      display: flex;
       width: 60%;
+      @media screen and (max-width: $first-break){
+        width: 95%;
+        flex-direction: column;
+      }
+      @media screen and (max-width: $second-break){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      @media screen and (max-width: 380px){
+        width: 100%;
+      }
       div.contact{
         width: 50%;
         padding-right: 70px;
         background-color: $logo-red;
+        @media screen and (max-width: $second-break){
+          width: 90%;
+          margin-top: 40px;
+          padding-right: 0; 
+        }
+        @media screen and (max-width: 380px){
+          width: 100%;
+          margin-top: 0;
+        }
         *::selection{
           background: $logo-blue;
         }
@@ -64,13 +104,22 @@ footer{
             margin-bottom: 20px;
           }
           div.phone{
-            grid-column: 1 / 1span;
+            grid-column: 1 / span 1;
             grid-row: 2;
             border-right: rgba(255, 255, 255, .5) solid 1px;
+            @media screen and (max-width: 380px){
+              grid-column:1 / span 2;
+              border-bottom: rgba(255, 255, 255, .5) solid 1px;
+              border-right: none;
+            }
           }
           div.fax{
-            grid-column:1 / 1span;
+            grid-column:2 / span 1;
             grid-row: 2;
+            @media screen and (max-width: 380px){
+              grid-column:1 / span 2;
+              grid-row: 3;
+            }
           }
           div.email{
             grid-column: 1 / span 2;
@@ -92,6 +141,13 @@ footer{
         position: absolute;
         width: 300px;
         right: 0;
+        @media screen and (max-width: $second-break){
+          position: relative;
+          margin-left: 0;
+          height: auto;
+          width: 80%;
+          margin-top: 40px;
+        }
         div.icon{
           i{
             background-color: rgb(163, 162, 199);
@@ -104,6 +160,15 @@ footer{
         p{
           font-size: 1.6em;
           margin-bottom: 10px;
+          @media screen and (max-width: 300px){
+            font-size: 1.1em;
+          }
+        }
+        h4{
+          @media screen and (max-width: 300px){
+            font-size: 1em;
+            margin: 0;  
+          }
         }
         div.main-hours{
           margin: 0 auto;
@@ -118,10 +183,23 @@ footer{
       }
     }
     div.plan-media{
+      display: flex;
       width: 40%;
+      @media screen and (max-width: $first-break){
+        width: 95%;
+        margin-top: 40px;
+      }
+      @media screen and (max-width: $second-break){
+        flex-direction: column;
+        align-items: center;
+      }
       div.plan{
         width: 62%;
         padding-left: 50px;
+        @media screen and (max-width: $second-break){
+          width: 80%;
+          padding-left: 0;
+        }
         h4{
           margin-bottom: 20px;
         }

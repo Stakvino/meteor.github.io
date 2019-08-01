@@ -10,6 +10,9 @@ div.product-item{
       font-size: 1.2em;
       text-align: center;
       margin-bottom: 40px;
+      @media screen and (max-width: 400px){
+        font-size: 1em;
+      }
     }
     a{
       display: flex;

@@ -3,9 +3,6 @@ require('./plugins/jquery.jqia.slickNav.js');
 require('./plugins/jquery.jqia.slideShow.js');*/
 const $window = $(window);
 
-//Auto scroll plugin
-const $navBar = $("nav");
-$navBar.jqiaSlickNav();
 const $logo = $("#logo");
 const $navBarLinks = $("ul li a", $navBar);
 
