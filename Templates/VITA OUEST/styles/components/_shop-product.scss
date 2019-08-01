@@ -1,0 +1,38 @@
+div.product-item{
+    border: rgba(0, 0, 0, .2) solid 1px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    transition: border-color .5s;
+    &:hover{
+      border-color: black;
+      div.detail-layer{
+        transform: translateY(-100%);
+      }
+    }
+    a{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p.product-name{
+        text-align: center;
+        color: #242424;
+        font-weight: bold;
+        word-wrap: break-word;
+        width: 218px;
+        text-align: center;
+      }
+      div.detail-layer{
+        color: white;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        text-align: center;
+        padding: 17px 0;
+        width: 100%;
+        background-color: $logo-blue;
+        transition: transform .5s;
+      }
+    }
+  }

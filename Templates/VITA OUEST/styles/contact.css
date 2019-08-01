@@ -4,7 +4,7 @@
 html {
   font-family: "Montserrat";
   color: #414141;
-  background: url("../img/background/bg2.jpg") no-repeat center center fixed;
+  background: url("../img/background/bg2.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -360,10 +360,94 @@ nav div.nav-container ul.drop-down-list li a {
 
 div.main {
   padding: 80px 0;
+  color: #242424;
 }
 div.main div.container {
   width: 1170px;
   margin: 0 auto;
+}
+div.main div.container h2 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 60px;
+}
+div.main div.container div.form-contact {
+  display: flex;
+  justify-content: space-between;
+}
+div.main div.container div.form-contact div.form {
+  width: 35%;
+  position: relative;
+  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
+  background: url("../img/background/5.jpg") center;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+div.main div.container div.form-contact div.form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 1em;
+}
+div.main div.container div.form-contact div.form form * {
+  padding: 17px;
+  margin-bottom: 30px;
+}
+div.main div.container div.form-contact div.form form input[type=text], div.main div.container div.form-contact div.form form textarea, div.main div.container div.form-contact div.form form input[type=email] {
+  background-color: rgba(100, 100, 100, 0.4);
+  border: none;
+  color: white;
+}
+div.main div.container div.form-contact div.form form input[type=text]::placeholder, div.main div.container div.form-contact div.form form textarea::placeholder, div.main div.container div.form-contact div.form form input[type=email]::placeholder {
+  color: white;
+}
+div.main div.container div.form-contact div.form form input[type=submit] {
+  align-self: flex-start;
+  padding: 12px 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #0c3958;
+  transition: background-color 0.5s;
+  border: none;
+}
+div.main div.container div.form-contact div.form form input[type=submit]:hover {
+  background-color: #ef3739;
+}
+div.main div.container div.form-contact div.form form textarea {
+  height: 200px;
+}
+div.main div.container div.form-contact div.contact div.details {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: 130px 130px;
+  grid-template-columns: 340px 340px;
+}
+div.main div.container div.form-contact div.contact div.details > div {
+  display: flex;
+  padding: 30px 0;
+}
+div.main div.container div.form-contact div.contact div.details div.icon {
+  margin-right: 15px;
+}
+div.main div.container div.form-contact div.contact div.details div.icon i {
+  width: 40px;
+  height: 40px;
+  background-color: #0c3958;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.main div.container div.form-contact div.contact div.details div.info {
+  font-size: 1em;
+  font-weight: bold;
+}
+div.main div.container div.form-contact div.contact div.details div.info h5 {
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=contact.css.map */
