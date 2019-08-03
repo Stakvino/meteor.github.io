@@ -1,44 +1,118 @@
 $nav-selectedColor : #ef3739;
 $logo-blue: #0c3958;
+.translate-out{
+  transform: translateX(-100%);
+}
+.slick-button-out{
+  transform: translateX(-100%);
+}
+.slick-button-in{
+  transform: translateX(10px);
+}
+.rotate{
+  transform: rotate(180deg);
+}
+button.slick-nav-but{
+  background-color: #ef3739;
+  width: 45px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  transition: transform .5s;
+  z-index: 9999999;
+  display: none;
+  @media screen and (max-width: 270px){
+    width: 25px;
+    height: 18px;
+  }
+  @media screen and (max-width: 770px){
+    display: block;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:focus {
+    outline: none;
+  } 
+  span{
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 4px auto;
+    border-radius: 5px;
+    @media screen and (max-width: 270px){
+      height: 1px;
+      margin: 2px auto;
+    }
+  }
+}
+
+button.slick-nav-close{
+  background-color: #ef3739;
+  width: 45px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  transition: transform .5s;
+  z-index: 9999999;
+  display: none;
+  @media screen and (max-width: 770px){
+    display: block;
+  }
+  @media screen and (max-width: 270px){
+    width: 25px;
+    height: 18px;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:focus {
+    outline: none;
+  } 
+  span{
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+      color: white;
+      font-size: 1.1em;
+      @media screen and (max-width: 270px){
+        font-size: .8em;
+      }
+    }
+  }
+}
+
 #slick_nav_jquery_jqia{
-  width: 100%;
+  width: 245px;
   background-color: #0c3958;
+  height: 100%;
   position: fixed;
   display: none;
   z-index: 99999;
+  transition: transform .5s;
+  overflow: scroll;
   @media screen and (max-width: 770px){
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 270px){
+    width: 100%;
   }
   div.slick-nav-container{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-  }
-  button.slick-nav-but{
-    background-color: #ef3739;
-    width: 45px;
-    height: 35px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    &::-moz-focus-inner {
-      border: 0;
-    }
-    &:focus {
-      outline: none;
-    } 
-    span{
-      width: 50%;
-      height: 2px;
-      background-color: white;
-      display: block;
-      margin: 4px auto;
-      border-radius: 5px;
-    }
+    flex: 1;
   }
   .black-links-container{
     background-color: black;
@@ -53,14 +127,41 @@ $logo-blue: #0c3958;
     display: flex;
     flex-direction: column;
     transition: background-color .5s;
-    a{
-      padding: 15px 0;
+    padding-bottom: 60px;
+    li{
+      display: block;
+      & > ul{
+        background-image: url("../../img/background/5.jpg");
+        & > li{
+          a:hover{
+            background-color: #ef3739;
+          }
+        }
+      }
+      a{
+        padding: 15px;
+        display: block;
+        color: white;
+        font-family: sans-serif;
+        transition: background-color .3s;
+        text-transform: uppercase;
+        @media screen and (max-width: 270px){
+          font-size: .9em;
+        }
+      }
+    }
+  }
+  div.links-container > li{
+    &.nested-li a{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: white;
-      text-align: center;
-      font-family: sans-serif;
-      transition: background-color .3s;
-      padding-left: 10px;
-      text-transform: uppercase;
+      span.chevron{
+        transition: transform .5s;
+      }
+    }
+    & > a{
       &.selected-link{
         background-color: $nav-selectedColor;
       }

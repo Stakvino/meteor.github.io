@@ -1,22 +1,20 @@
-#slick_nav_jquery_jqia {
-  width: 100%;
-  background-color: #0c3958;
-  position: fixed;
-  display: none;
-  z-index: 99999;
+.translate-out {
+  transform: translateX(-100%);
 }
-@media screen and (max-width: 770px) {
-  #slick_nav_jquery_jqia {
-    display: block;
-  }
+
+.slick-button-out {
+  transform: translateX(-100%);
 }
-#slick_nav_jquery_jqia div.slick-nav-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
+
+.slick-button-in {
+  transform: translateX(10px);
 }
-#slick_nav_jquery_jqia button.slick-nav-but {
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+button.slick-nav-but {
   background-color: #ef3739;
   width: 45px;
   height: 35px;
@@ -25,21 +23,115 @@
   cursor: pointer;
   position: fixed;
   top: 10px;
-  right: 15px;
+  transition: transform 0.5s;
+  z-index: 9999999;
+  display: none;
 }
-#slick_nav_jquery_jqia button.slick-nav-but::-moz-focus-inner {
+@media screen and (max-width: 270px) {
+  button.slick-nav-but {
+    width: 25px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 770px) {
+  button.slick-nav-but {
+    display: block;
+  }
+}
+button.slick-nav-but::-moz-focus-inner {
   border: 0;
 }
-#slick_nav_jquery_jqia button.slick-nav-but:focus {
+button.slick-nav-but:focus {
   outline: none;
 }
-#slick_nav_jquery_jqia button.slick-nav-but span {
+button.slick-nav-but span {
   width: 50%;
   height: 2px;
   background-color: white;
   display: block;
   margin: 4px auto;
   border-radius: 5px;
+}
+@media screen and (max-width: 270px) {
+  button.slick-nav-but span {
+    height: 1px;
+    margin: 2px auto;
+  }
+}
+
+button.slick-nav-close {
+  background-color: #ef3739;
+  width: 45px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  transition: transform 0.5s;
+  z-index: 9999999;
+  display: none;
+}
+@media screen and (max-width: 770px) {
+  button.slick-nav-close {
+    display: block;
+  }
+}
+@media screen and (max-width: 270px) {
+  button.slick-nav-close {
+    width: 25px;
+    height: 18px;
+  }
+}
+button.slick-nav-close::-moz-focus-inner {
+  border: 0;
+}
+button.slick-nav-close:focus {
+  outline: none;
+}
+button.slick-nav-close span {
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.slick-nav-close span i {
+  color: white;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 270px) {
+  button.slick-nav-close span i {
+    font-size: 0.8em;
+  }
+}
+
+#slick_nav_jquery_jqia {
+  width: 245px;
+  background-color: #0c3958;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 99999;
+  transition: transform 0.5s;
+  overflow: scroll;
+}
+@media screen and (max-width: 770px) {
+  #slick_nav_jquery_jqia {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 270px) {
+  #slick_nav_jquery_jqia {
+    width: 100%;
+  }
+}
+#slick_nav_jquery_jqia div.slick-nav-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 #slick_nav_jquery_jqia .black-links-container {
   background-color: black;
@@ -54,20 +146,43 @@
   display: flex;
   flex-direction: column;
   transition: background-color 0.5s;
+  padding-bottom: 60px;
 }
-#slick_nav_jquery_jqia div.links-container a {
-  padding: 15px 0;
-  color: white;
-  text-align: center;
-  font-family: sans-serif;
-  transition: background-color 0.3s;
-  padding-left: 10px;
-  text-transform: uppercase;
+#slick_nav_jquery_jqia div.links-container li {
+  display: block;
 }
-#slick_nav_jquery_jqia div.links-container a.selected-link {
+#slick_nav_jquery_jqia div.links-container li > ul {
+  background-image: url("../../img/background/5.jpg");
+}
+#slick_nav_jquery_jqia div.links-container li > ul > li a:hover {
   background-color: #ef3739;
 }
-#slick_nav_jquery_jqia div.links-container a:hover {
+#slick_nav_jquery_jqia div.links-container li a {
+  padding: 15px;
+  display: block;
+  color: white;
+  font-family: sans-serif;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 270px) {
+  #slick_nav_jquery_jqia div.links-container li a {
+    font-size: 0.9em;
+  }
+}
+#slick_nav_jquery_jqia div.links-container > li.nested-li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#slick_nav_jquery_jqia div.links-container > li.nested-li a span.chevron {
+  transition: transform 0.5s;
+}
+#slick_nav_jquery_jqia div.links-container > li > a.selected-link {
+  background-color: #ef3739;
+}
+#slick_nav_jquery_jqia div.links-container > li > a:hover {
   background-color: #ef3739;
 }
 

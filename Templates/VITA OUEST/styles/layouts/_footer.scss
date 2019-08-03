@@ -202,6 +202,9 @@ footer{
         }
         h4{
           margin-bottom: 20px;
+          @media screen and (max-width: 280px){
+            font-size: 1em;
+          }
         }
         ul{
           margin-bottom: 40px;
@@ -226,14 +229,26 @@ footer{
               color: rgb(163, 162, 199);
               font-weight: bold;
               transition: color .5s;
+              @media screen and (max-width: 280px){
+                font-size: .9em;
+              }
             }
           }
         }
       }
       div.logo-media{
         width: 198px;
+        @media screen and (max-width: 280px){
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         div.logo{
           margin-bottom: 35px;
+          @media screen and (max-width: 280px){
+            width: 120px;
+          }
         }
         div.media{
           display: flex;
@@ -242,6 +257,9 @@ footer{
           align-items: center;
           position: relative;
           padding: 45px 0;
+          @media screen and (max-width: 280px){
+            width: 95%;
+          }
           background: url("../img/background/5.jpg") center;
           box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, .1),
                     -1px -1px 15px 15px rgba(0, 0, 0, .1);

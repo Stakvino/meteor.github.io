@@ -4,26 +4,29 @@ require('./jquery.jqia.scrollTo.js');*/
 (function($) {
    
   var slickNavHTML = `
-    <div id="slick_nav_jquery_jqia">
+    <button class="slick-nav-but slick-button-in">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <button class="slick-nav-close slick-button-out">
+      <span><i class="fas fa-times"></i></span>
+    </button>
+    <div id="slick_nav_jquery_jqia" class="translate-out">
       <div class="slick-nav-container">
-        <button class="slick-nav-but">
-        <span></span>
-        <span></span>
-        <span></span>
-        </button>
         <div class="links-container"></div>
       </div>
     </div>
   `;
 
  var $slickNavDOM = $(slickNavHTML);
- var $slickNavBut = $("button", $slickNavDOM);
+ var $slickNavBut = $slickNavDOM.eq(0);
+ const $slickNavClose = $slickNavDOM.eq(2);
  
  $.fn.jqiaSlickNav = function(options) {
    options = $.extend(true, {}, $.fn.jqiaSlickNav.defaults, options);
 
    //position the slicknav Button
-   console.log(options.position);
    
    var $slickContainer = $(".slick-nav-container button.slick-nav-but", $slickNavDOM);
    if(options.position == "right"){
@@ -36,11 +39,10 @@ require('./jquery.jqia.scrollTo.js');*/
 
    var $navBar = this;
    //position slick nav
-   $(window).resize(function(){
+   /*$(window).resize(function(){
      $slickNavDOM.css({top: $navBar.is(":hidden") ? 60 : $navBar.innerHeight()});
-   }).trigger("resize");
-   var $linksCollection = $("ul", $navBar).eq(0).find("> li > a");
-   console.log($linksCollection);
+   }).trigger("resize");*/
+   var $linksCollection = $("a", $navBar);
    
    //event hadlers for nav links
    /*
@@ -53,11 +55,26 @@ require('./jquery.jqia.scrollTo.js');*/
      });
    });
 */
-   var $linksContainer  = $("div.links-container", $slickNavDOM).hide();
+   var $linksContainer  = $("div.links-container", $slickNavDOM);
+   const $slick_nav_jquery_jqia = $slickNavDOM.eq(4);
+
+   function replaceClass($element, removedClass, adeedCLass){
+     $element.removeClass(removedClass);
+     $element.addClass(adeedCLass);
+   }
+
    $slickNavBut.click(function(){
-     $linksContainer.slideToggle();
-   }); 
-   
+      $slick_nav_jquery_jqia.removeClass("translate-out");
+      replaceClass($slickNavBut, "slick-button-in", "slick-button-out");
+      replaceClass($slickNavClose, "slick-button-out", "slick-button-in");
+   });
+
+   $slickNavClose.click(function(){
+      $slick_nav_jquery_jqia.addClass("translate-out");
+      replaceClass($slickNavBut, "slick-button-out", "slick-button-in");
+      replaceClass($slickNavClose, "slick-button-in", "slick-button-out");
+   });
+
    var $scrollUpBut = $("#scrollUp");
    //show and hide scrollUp button
    if(options.scrollTopButton){
@@ -76,51 +93,41 @@ require('./jquery.jqia.scrollTo.js');*/
      $scrollUpBut.jqiaScrollTo(0, options.scrollAnimationDuration);
    });
 
-   $linksCollection.each(function(index){
-     var $linkCollection = $(this);
-     var href = $linkCollection.attr("href");
-     var text = $linkCollection.text();
-     if(!text){
-       return;
-     }
-     var a = $(`<a href="${href}">${text}</a>`);
-     if($linkCollection.attr("data-anchor") === ""){
-       a.attr("data-anchor", "");
-     }
-     //add target attribute to new links created if it exist
-     if( $linkCollection.attr("target") ){
-       a.attr("target", $linkCollection.attr("target"));
-     }
-     //clicking on a slickNav link will scroll to the anchor
-     /*
-     if(a.attr("data-anchor") === ""){
-       a.click(function(e){
-         e.preventDefault();
-         var $bar = $navBar.is(":hidden") ? $slickNavBut : $navBar;
-         var $to = $($(this).attr("href").slice(1));
-         $bar.jqiaScrollTo($to, options.scrollAnimationDuration);
-         $linksContainer.slideUp();
-       });
-     }*/
-     a.appendTo($linksContainer);
-     //this will be used to keep event handlers
-     /* 
-     $this.ready(function(){
-       var linkEvents = $._data($this.get(0), "events");
-       //attach click event handlers to the new links
-       if(linkEvents && linkEvents.click){
-         var clickEvents = linkEvents.click;
-         for(var i = 0; i < clickEvents.length; i++){
-           a.click(clickEvents[i].handler);
-         }
-       }
-     });
-     */
-   });
-   //console.log();
+
+   function generateLinks($ul, $container){
+    const $lis = $ul.find("> li");
+    $lis.each(function(){
+      const $li = $(this);
+      const $link = $li.find("> a");
+      const href = $link.attr("href");
+      const text = $link.text();
+      if(!text){
+        return;
+      }
+      const $newLi = $(`<li><a href="${href}">${text}</a></li>`);
+      $newLi.appendTo($container);
+      const $nestedUl = $li.find("ul").eq(0);
+      if($nestedUl.length){
+        const $newUl = $("<ul></ul>");
+        $newUl.appendTo($newLi);
+        $newLi.addClass("nested-li");
+        $newUl.hide();
+        const $chevronIcon = $('<span class="chevron"><i class="fas fa-chevron-down"></i></span>');
+        $newLi.find("> a").append($chevronIcon);
+        $newLi.find("> a").click(e => {
+          e.preventDefault();
+          $newUl.slideToggle();
+          $chevronIcon.toggleClass("rotate");
+        });
+        generateLinks($nestedUl, $newUl);
+      }
+    });
+   }
+
+   generateLinks($navBar.find("ul").eq(0), $linksContainer); 
+   console.log($linksContainer.find("li > ul"));
    
-   //$linksCollection.eq(1).addClass("selected-link");
-   
+
    var changeLinkHighlight = function($navBarLink, $slickNavLink){
      $(".selected-link", $navBar).removeClass("selected-link");
      $(".selected-link", $linksContainer).removeClass("selected-link");

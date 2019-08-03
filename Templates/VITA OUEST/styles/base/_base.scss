@@ -7,6 +7,14 @@ html{
   -o-background-size: cover;
   background-size: cover; 
 }
+body{
+  @media screen and (max-width: $third-break){
+    margin-top: 56px;
+  }
+  @media screen and (max-width: 270px){
+    margin-top: 40px;
+  }
+}
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
 input,

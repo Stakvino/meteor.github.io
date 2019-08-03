@@ -11,6 +11,17 @@ html {
   background-size: cover;
 }
 
+@media screen and (max-width: 770px) {
+  body {
+    margin-top: 56px;
+  }
+}
+@media screen and (max-width: 270px) {
+  body {
+    margin-top: 40px;
+  }
+}
+
 :focus {
   outline: none;
 }
@@ -383,6 +394,11 @@ footer div.footer-container div.plan-media div.plan {
 footer div.footer-container div.plan-media div.plan h4 {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 280px) {
+  footer div.footer-container div.plan-media div.plan h4 {
+    font-size: 1em;
+  }
+}
 footer div.footer-container div.plan-media div.plan ul {
   margin-bottom: 40px;
   display: flex;
@@ -407,11 +423,29 @@ footer div.footer-container div.plan-media div.plan ul li a {
   font-weight: bold;
   transition: color 0.5s;
 }
+@media screen and (max-width: 280px) {
+  footer div.footer-container div.plan-media div.plan ul li a {
+    font-size: 0.9em;
+  }
+}
 footer div.footer-container div.plan-media div.logo-media {
   width: 198px;
 }
+@media screen and (max-width: 280px) {
+  footer div.footer-container div.plan-media div.logo-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 footer div.footer-container div.plan-media div.logo-media div.logo {
   margin-bottom: 35px;
+}
+@media screen and (max-width: 280px) {
+  footer div.footer-container div.plan-media div.logo-media div.logo {
+    width: 120px;
+  }
 }
 footer div.footer-container div.plan-media div.logo-media div.media {
   display: flex;
@@ -422,6 +456,11 @@ footer div.footer-container div.plan-media div.logo-media div.media {
   padding: 45px 0;
   background: url("../img/background/5.jpg") center;
   box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.1), -1px -1px 15px 15px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 280px) {
+  footer div.footer-container div.plan-media div.logo-media div.media {
+    width: 95%;
+  }
 }
 footer div.footer-container div.plan-media div.logo-media div.media a {
   color: #0c3958;
@@ -444,12 +483,6 @@ footer div.footer-container div.plan-media div.logo-media div.media div.fix-bolt
   left: 40%;
 }
 
-@media screen and (max-width: 770px) {
-  #slick_nav_jquery_jqia {
-    display: block;
-  }
-}
-
 nav {
   display: flex;
 }
@@ -470,7 +503,6 @@ nav div.nav-container {
   flex-direction: row-reverse;
 }
 nav div.nav-container a.logo {
-  width: 198px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -485,6 +517,11 @@ nav div.nav-container a.logo {
     width: 140px;
   }
 }
+@media screen and (max-width: 270px) {
+  nav div.nav-container a.logo img {
+    width: 100px;
+  }
+}
 @media screen and (max-width: 1200px) {
   nav div.nav-container {
     width: 970px;
@@ -493,6 +530,11 @@ nav div.nav-container a.logo {
 @media screen and (max-width: 990px) {
   nav div.nav-container {
     width: 750px;
+  }
+}
+@media screen and (max-width: 770px) {
+  nav div.nav-container {
+    width: 100%;
   }
 }
 nav div.nav-container ul {
@@ -566,7 +608,7 @@ nav div.nav-container ul.drop-down-list li a {
 }
 
 div.main {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 div.main div.container {
   width: 1170px;

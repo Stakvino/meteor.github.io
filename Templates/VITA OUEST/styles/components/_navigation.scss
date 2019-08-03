@@ -1,7 +1,5 @@
-#slick_nav_jquery_jqia{
-  @media screen and (max-width: $third-break){
-    display: block;
-  }
+.translate-in{
+  transform: translateY(100%);
 }
 nav{
   display: flex;
@@ -20,7 +18,7 @@ nav{
     flex-direction: row-reverse;
     
     a.logo{
-      width: 198px;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,6 +29,9 @@ nav{
         @media screen and (max-width: $third-break){
           width: 140px;
         }
+        @media screen and (max-width: 270px){
+          width: 100px;
+        }
       }
     }
     @media screen and (max-width: $first-break){
@@ -38,6 +39,9 @@ nav{
     }
     @media screen and (max-width: $second-break){
       width: 750px;
+    }
+    @media screen and (max-width: $third-break){
+      width: 100%;
     }
     ul{
       display: flex;
@@ -86,6 +90,7 @@ nav{
       position: absolute;
       z-index: 999;
       top: 100%;
+      left: -10px;
       background-color: $logo-blue;
       li{
         a{
