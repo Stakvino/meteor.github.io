@@ -17,6 +17,48 @@ div.main{
         font-size: 1.5em;
       }
     }
+    div.small-screen-categories{
+      background-color: $logo-blue;
+      width: 350px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      @media screen and (max-width: 350px){
+        width: 95%;
+      }
+      div.title{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+        cursor: pointer;
+        h4{
+          text-align: center;
+          font-size: 1.2em;
+          padding: 5px 0;
+          color: white;
+        }
+        span{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i{
+            color: white;
+          }
+        }
+      }
+      ul{
+        li{
+          a{
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            display: block;
+            &:hover{
+              background-color: $logo-red;
+            }
+          }
+        }
+      }
+    }
     div.container{
         width: 1170px;
         margin: 0 auto;

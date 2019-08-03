@@ -483,6 +483,32 @@ footer div.footer-container div.plan-media div.logo-media div.media div.fix-bolt
   left: 40%;
 }
 
+.hide {
+  display: none;
+}
+
+div.scroll-up {
+  width: 40px;
+  height: 40px;
+  background-color: #ef3739;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  border: white solid 1px;
+  cursor: pointer;
+}
+div.scroll-up i {
+  color: white;
+}
+
+.translate-in {
+  transform: translateY(100%);
+}
+
 nav {
   display: flex;
 }
@@ -588,6 +614,7 @@ nav div.nav-container ul.drop-down-list {
   position: absolute;
   z-index: 999;
   top: 100%;
+  left: -10px;
   background-color: #0c3958;
 }
 nav div.nav-container ul.drop-down-list li a {
@@ -634,6 +661,46 @@ div.main h2 {
   div.main h2 {
     font-size: 1.5em;
   }
+}
+div.main div.small-screen-categories {
+  background-color: #0c3958;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 350px) {
+  div.main div.small-screen-categories {
+    width: 95%;
+  }
+}
+div.main div.small-screen-categories div.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+}
+div.main div.small-screen-categories div.title h4 {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px 0;
+  color: white;
+}
+div.main div.small-screen-categories div.title span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.main div.small-screen-categories div.title span i {
+  color: white;
+}
+div.main div.small-screen-categories ul li a {
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  display: block;
+}
+div.main div.small-screen-categories ul li a:hover {
+  background-color: #ef3739;
 }
 div.main div.container {
   width: 1170px;

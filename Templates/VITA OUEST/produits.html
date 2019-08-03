@@ -11,11 +11,13 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     
     <link rel="stylesheet" href="styles/produits.css">
   </head>
 
   <body>
+    <div class="scroll-up"><i class="fas fa-chevron-up"></i></div>
     <header>
       <div class="header-container">
         <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
@@ -50,6 +52,20 @@
 
     <div class="main">
       <h2>Nos Produits</h2>
+      <div class="small-screen-categories">
+        <div class="title">
+          <span><i class="fas fa-chevron-down"></i></span>
+          <h4>Catégories</h4>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <ul>
+          <li><a href="#" class="selected">Vis</a></li>
+          <li><a href="#">Boulons</a></li>
+          <li><a href="#">RONDELLES</a></li>
+          <li><a href="#">ECROUS</a></li>
+          <li><a href="#">AUTRES</a></li>
+        </ul>
+      </div>
       <div class="container">
         <div class="products">
             <div class="product-item">
@@ -244,5 +260,6 @@
     <script src="js/plugins/jquery.jqia.slickNav.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/slickNav.js"></script>
+    <script src="js/products.js"></script>
   </body>
 </html>

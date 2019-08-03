@@ -1,3 +1,23 @@
+.hide{
+  display: none;
+}
+div.scroll-up{
+  width: 40px;
+  height: 40px;
+  background-color: $logo-red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  border: white solid 1px;
+  cursor: pointer;
+  i{
+    color: white;
+  }
+}
 .translate-in{
   transform: translateY(100%);
 }

@@ -75,22 +75,23 @@ require('./jquery.jqia.scrollTo.js');*/
       replaceClass($slickNavClose, "slick-button-in", "slick-button-out");
    });
 
-   var $scrollUpBut = $("#scrollUp");
    //show and hide scrollUp button
-   if(options.scrollTopButton){
+   const $scrollTopButton = options.scrollTopButton;
+   if($scrollTopButton){
      $(window).scroll(function(){
        //scrolling down will show scrollUp button
        var scrollTop = $(this).scrollTop();
-       if( scrollTop > 270 && $scrollUpBut.is(":hidden") ){
-         $scrollUpBut.fadeIn(200);
-       }else if( scrollTop <= 270 && $scrollUpBut.is(":visible") ){
-         $scrollUpBut.fadeOut(200);
+       if( scrollTop > 270 && $scrollTopButton.is(":hidden") ){
+         $scrollTopButton.fadeIn(200);
+       }else if( scrollTop <= 270 && $scrollTopButton.is(":visible") ){
+         $scrollTopButton.fadeOut(200);
+         
        }
      }).trigger("scroll");
    }
-   $scrollUpBut.click(function(e){
+   $scrollTopButton.click(function(e){
      e.preventDefault();
-     $scrollUpBut.jqiaScrollTo(0, options.scrollAnimationDuration);
+     $scrollTopButton.jqiaScrollTo(0, options.scrollAnimationDuration);
    });
 
 
@@ -123,11 +124,8 @@ require('./jquery.jqia.scrollTo.js');*/
       }
     });
    }
-
    generateLinks($navBar.find("ul").eq(0), $linksContainer); 
-   console.log($linksContainer.find("li > ul"));
-   
-
+  
    var changeLinkHighlight = function($navBarLink, $slickNavLink){
      $(".selected-link", $navBar).removeClass("selected-link");
      $(".selected-link", $linksContainer).removeClass("selected-link");
