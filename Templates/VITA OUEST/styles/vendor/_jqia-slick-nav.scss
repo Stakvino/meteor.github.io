@@ -129,7 +129,6 @@ button.slick-nav-close{
     transition: background-color .5s;
     padding-bottom: 60px;
     li{
-      display: block;
       & > ul{
         background-image: url("../../img/background/5.jpg");
         & > li{
@@ -139,8 +138,11 @@ button.slick-nav-close{
         }
       }
       a{
-        padding: 15px;
-        display: block;
+        height: 45px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         color: white;
         font-family: sans-serif;
         transition: background-color .3s;
@@ -158,7 +160,16 @@ button.slick-nav-close{
       align-items: center;
       color: white;
       span.chevron{
-        transition: transform .5s;
+        width: 60px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        i{
+          transition: transform .5s;
+          color: #0c3958;
+        }
       }
     }
     & > a{

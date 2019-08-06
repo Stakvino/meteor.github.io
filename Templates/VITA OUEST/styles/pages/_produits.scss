@@ -22,6 +22,10 @@ div.main{
       width: 350px;
       margin: 0 auto;
       margin-bottom: 30px;
+      display: none;
+      @media screen and (max-width: $third-break){
+        display: block;
+      }
       @media screen and (max-width: 350px){
         width: 95%;
       }

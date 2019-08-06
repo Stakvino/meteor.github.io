@@ -44,17 +44,7 @@ require('./jquery.jqia.scrollTo.js');*/
    }).trigger("resize");*/
    var $linksCollection = $("a", $navBar);
    
-   //event hadlers for nav links
-   /*
-   $linksCollection.each(function(index){
-     var $this = $(this);
-     var $to = $($this.attr("href").slice(1));
-     $this.click(function(e){
-       e.preventDefault();
-       $navBar.jqiaScrollTo($to, options.scrollAnimationDuration);
-     });
-   });
-*/
+
    var $linksContainer  = $("div.links-container", $slickNavDOM);
    const $slick_nav_jquery_jqia = $slickNavDOM.eq(4);
 
@@ -116,9 +106,11 @@ require('./jquery.jqia.scrollTo.js');*/
         const $chevronIcon = $('<span class="chevron"><i class="fas fa-chevron-down"></i></span>');
         $newLi.find("> a").append($chevronIcon);
         $newLi.find("> a").click(e => {
-          e.preventDefault();
-          $newUl.slideToggle();
-          $chevronIcon.toggleClass("rotate");
+          if(e.target === $chevronIcon[0] || e.target === $chevronIcon.find("i")[0]){
+            e.preventDefault();
+            $newUl.slideToggle();
+            $chevronIcon.find("i").toggleClass("rotate");
+          }
         });
         generateLinks($nestedUl, $newUl);
       }

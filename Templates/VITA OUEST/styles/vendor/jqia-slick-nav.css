@@ -148,9 +148,6 @@ button.slick-nav-close span i {
   transition: background-color 0.5s;
   padding-bottom: 60px;
 }
-#slick_nav_jquery_jqia div.links-container li {
-  display: block;
-}
 #slick_nav_jquery_jqia div.links-container li > ul {
   background-image: url("../../img/background/5.jpg");
 }
@@ -158,8 +155,11 @@ button.slick-nav-close span i {
   background-color: #ef3739;
 }
 #slick_nav_jquery_jqia div.links-container li a {
-  padding: 15px;
-  display: block;
+  height: 45px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
   font-family: sans-serif;
   transition: background-color 0.3s;
@@ -177,7 +177,16 @@ button.slick-nav-close span i {
   color: white;
 }
 #slick_nav_jquery_jqia div.links-container > li.nested-li a span.chevron {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+#slick_nav_jquery_jqia div.links-container > li.nested-li a span.chevron i {
   transition: transform 0.5s;
+  color: #0c3958;
 }
 #slick_nav_jquery_jqia div.links-container > li > a.selected-link {
   background-color: #ef3739;
