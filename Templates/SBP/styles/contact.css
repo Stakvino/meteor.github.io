@@ -132,6 +132,11 @@ a.selected-page {
 header {
   height: 109px;
 }
+@media screen and (max-width: 1000px) {
+  header {
+    height: 86px;
+  }
+}
 
 nav {
   width: 100%;

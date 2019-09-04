@@ -191,6 +191,11 @@ button.button-subscribe {
 header {
   height: 109px;
 }
+@media screen and (max-width: 1000px) {
+  header {
+    height: 86px;
+  }
+}
 
 nav {
   width: 100%;
@@ -250,11 +255,6 @@ nav div.nav-container ul li.header-logo img {
   margin: 0 5ps;
 }
 @media screen and (max-width: 1000px) {
-  nav div.nav-container ul li.header-logo img {
-    width: 60px;
-  }
-}
-@media screen and (max-width: 350px) {
   nav div.nav-container ul li.header-logo img {
     width: 60px;
   }

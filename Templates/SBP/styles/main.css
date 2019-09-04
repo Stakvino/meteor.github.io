@@ -87,6 +87,7 @@ div.controls-container {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 99998;
   display: flex;
   justify-content: center;
 }
@@ -385,6 +386,11 @@ button.button-subscribe {
 header {
   height: 109px;
 }
+@media screen and (max-width: 1000px) {
+  header {
+    height: 86px;
+  }
+}
 
 nav {
   width: 100%;
@@ -458,6 +464,11 @@ div.slider-overlay {
   width: 100%;
   z-index: 999;
 }
+@media screen and (max-width: 1000px) {
+  div.slider-overlay {
+    top: 86px;
+  }
+}
 
 div.header-slider {
   width: 100%;
@@ -480,33 +491,48 @@ div.header-slider div.slide div.slide-caption {
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 600px) {
   div.header-slider div.slide div.slide-caption {
-    width: 90%;
+    top: 40%;
   }
 }
 div.header-slider div.slide div.slide-caption h2 {
   text-align: center;
   color: white;
   padding: 25px 30px;
-  font-size: 6em;
+  font-size: 5.5em;
   text-shadow: 4px 4px black;
   margin-bottom: 25px;
   max-width: 90%;
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1200px) {
   div.header-slider div.slide div.slide-caption h2 {
-    font-size: 2.6em;
+    font-size: 4.8em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.header-slider div.slide div.slide-caption h2 {
+    font-size: 4.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.header-slider div.slide div.slide-caption h2 {
+    font-size: 3.8em;
   }
 }
 @media screen and (max-width: 870px) {
   div.header-slider div.slide div.slide-caption h2 {
-    font-size: 2.2em;
+    font-size: 3.2em;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 720px) {
   div.header-slider div.slide div.slide-caption h2 {
-    font-size: 1.9em;
+    font-size: 2.6em;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.header-slider div.slide div.slide-caption h2 {
+    font-size: 2.2em;
     padding: 5px 10px;
   }
 }
