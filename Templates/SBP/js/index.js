@@ -13,6 +13,7 @@ const $navBarLinks = $("ul li a", $navBar);
 
 //heeader slider
 const $headerSlider = $("div.header-slider");
+const $sliderOverlay = $("div.slider-overlay");
 $headerSlider.jqiaSlideShow({translateContent: true, delay: 6});
 //Resize heeader slider's height using image height
 const $sliderImg = $("img", $headerSlider).eq(0);
@@ -20,6 +21,7 @@ let breakPoint = false;
 $window.resize(function(){
   const $imgHeight = $sliderImg.height();
   $headerSlider.height($imgHeight);
+  $sliderOverlay.height($imgHeight);
 }).trigger("resize");
 
 

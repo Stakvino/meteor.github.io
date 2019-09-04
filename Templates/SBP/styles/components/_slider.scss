@@ -1,3 +1,13 @@
+div.slider-overlay{
+  background-color: $main-blue;
+  opacity: .3;
+  position: absolute;
+  top: 109px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 div.header-slider{
   width: 100%;
   div.slide{
@@ -12,20 +22,19 @@ div.header-slider{
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: 50%;
+      z-index: 9999;
       transform: translate(-50%, -50%);
       @media screen and (max-width: $third-break){
         width: 90%;
       }
       h2{
         text-align: center;
-        color: #1e2351;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 15px;
-        border: solid 5px #1e2351;
+        color: white;
         padding: 25px 30px;
-        font-size: 3em;
+        font-size: 6em;
+        text-shadow: 4px 4px black;
         margin-bottom: 25px;
         max-width: 90%;
         @media screen and (max-width: 990px){
