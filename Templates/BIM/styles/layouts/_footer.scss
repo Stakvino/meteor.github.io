@@ -1,0 +1,84 @@
+footer{
+  background-image: url("../img/footer-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  div.footer-info-container{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    padding: 60px 0; 
+    color: white;
+    justify-content: space-between;
+    font-size: 18px;
+    text-shadow: 2px 2px black;
+    @media screen and (max-width: 1150px){
+      width: 95%;
+      display: grid;
+      grid-template-columns: repeat(2, 47%);
+      grid-template-rows: repeat(auto-fit);
+    }
+    @media screen and (max-width: 500px){
+      display: flex;
+      flex-direction: column;
+    }
+    > div{
+      width: 22%;
+      @media screen and (max-width: 1150px){
+        width: 100%;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      div.footer-info-title{
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+        i{
+          color: $main-green;
+          font-size: 1.5em;
+          margin-right: 10px;
+        }
+      }
+    }
+    div.social-media{
+      div.social-media-items{
+        display: flex;
+        flex-wrap: wrap;
+        div.social-media-item{
+          display: flex;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          i{
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color .4s, color .4s;
+            border: white solid 1px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-shadow: none;
+            &:hover{
+              background-color: $main-green;
+              color: $main-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.all-right{
+    text-align: center;
+    background-color: $main-blue;
+    color: white;
+    padding: 20px 0;
+    @media screen and (max-width: 500px){
+      font-size: .9em;
+    }
+  }
+}
