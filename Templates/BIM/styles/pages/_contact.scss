@@ -1,0 +1,90 @@
+
+nav div.nav-container ul li.header-logo img{
+  width: 60px;
+}
+div.main{
+  padding: 60px 0;
+  margin-top: 100px;
+  h2{
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 100px;
+    color: $main-green;
+    text-decoration: underline;
+    @media screen and (max-width: 500px){
+      font-size: 3em;
+    }
+    @media screen and (max-width: 400px){
+      font-size: 2.5em;
+    }
+    @media screen and (max-width: 320px){
+      font-size: 2em;
+    }
+    @media screen and (max-width: 250px){
+      font-size: 1.5em;
+    }
+  }
+  div.contact-container{
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    @media screen and (max-width: 1200px){
+      width: 700px;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 750px){
+      width: 95%;
+      flex-direction: column;
+    }
+    div.form-container{
+      width: 600px;
+      @media screen and (max-width: 1200px){
+        width: 100%;;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-weight: 1em;
+        *{
+          padding: 17px;
+          margin-bottom: 30px;
+        }
+        input[type="text"], textarea, input[type="email"]{
+          background-color: $main-blue;
+          border: none;
+          color: white;
+          &::placeholder{
+            color: white;
+          }
+        }
+        input[type="submit"]{
+          align-self: flex-start;
+          padding: 12px 30px;
+          font-weight: bold;
+          color: white;
+          background-color: $main-green;
+          transition: background-color .5s;
+          border: none;
+          &:hover{
+            background-color: $main-blue;  
+          }
+        }
+        textarea{
+          height: 200px;
+        }
+      }
+    }
+  }
+  
+  div.map-container{
+    width: 500px;
+    margin: 0 auto;
+    @media screen and (max-width: 1150px){
+      width: 100%;;
+    }
+    iframe{
+      width: 100%;
+    }
+  }
+}

@@ -41,11 +41,13 @@ require('./jquery.jqia.scrollTo.js');*/
    //event hadlers for nav links
    $linksCollection.each(function(index){
      var $this = $(this);
-     var $to = $($this.attr("href").slice(1));
-     $this.click(function(e){
-       e.preventDefault();
-       $navBar.jqiaScrollTo($to, options.scrollAnimationDuration);
-     });
+     if($this.attr("href").startsWith("#")){
+      var $to = $($this.attr("href").slice(1));
+      $this.click(function(e){
+        e.preventDefault();
+        $navBar.jqiaScrollTo($to, options.scrollAnimationDuration);
+      });
+     }
    });
 
    var $linksContainer  = $("div.links-container", $slickNavDOM).hide();
