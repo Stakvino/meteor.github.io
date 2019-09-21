@@ -1,0 +1,48 @@
+.hide{
+  opacity: 0;
+}
+$select-options-background-color : white;
+$select-options-border-color : black;
+$select-options-selected-color : $main-green;
+
+div.select-options{
+  cursor: pointer;
+  width: 300px;
+  div.data-default_option{
+    color: black;
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span.chevron{
+      position: relative;
+      top: 3px;
+      font-weight: bold;
+      display: flex;
+      transform: rotate(90deg);
+    }
+  }
+  ul{
+    background-color: $select-options-background-color;
+    color: black;
+    border-radius: 5px;
+    margin-top: 2px;
+    position: absolute;
+    width: 300px;
+    z-index: 10;
+    li{
+      border-bottom: $select-options-border-color solid 1px;
+      padding: 10px;
+      &.selected-option{
+        background-color: $select-options-selected-color;
+      }
+      &:hover{
+        background-color: $select-options-selected-color;
+        color: white;
+      }  
+    }
+  }
+}
