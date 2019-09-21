@@ -1,6 +1,6 @@
 div.main{
   div.container{
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     padding: 60px 0;
     display: flex;
@@ -24,13 +24,18 @@ div.main{
       div.expositions-slider{
         display: flex;
         justify-content: space-between;
+        div.exposition-slide.selected-slide{
+          transform: scale(1);
+        }
         div.exposition-slide{
-          background-color: $main-green;
-          width: 150px;
-          height: 200px;
+          cursor: pointer;
+          background-image: linear-gradient($main-green,$main-green,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) );
+          width: 200px;
+          height: 220px;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+          transform: scale(.8);
           p.caption{
             text-align: center;
           }

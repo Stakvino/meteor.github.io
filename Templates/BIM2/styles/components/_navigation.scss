@@ -1,4 +1,5 @@
 header{
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
   nav{
     display: flex;
     align-items: center;
@@ -13,7 +14,7 @@ header{
           color: white;
           padding: 35px 10px;
           &.selected{
-            background-color: $main-green;
+            background-image: linear-gradient(rgba(0, 0, 0, .4),rgba(0, 0, 0, .1), $main-green);
           }
         }
       }

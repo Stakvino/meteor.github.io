@@ -51,6 +51,9 @@ ul.nav-links-container {
   text-transform: uppercase;
 }
 
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
 header nav {
   display: flex;
   align-items: center;
@@ -69,7 +72,53 @@ header nav ul li a {
   padding: 35px 10px;
 }
 header nav ul li a.selected {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), #078271);
+}
+
+.hide {
+  opacity: 0;
+}
+
+div.select-options {
+  cursor: pointer;
+  width: 300px;
+}
+div.select-options div.data-default_option {
+  color: black;
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.select-options div.data-default_option span.chevron {
+  position: relative;
+  top: 3px;
+  font-weight: bold;
+  display: flex;
+  transform: rotate(90deg);
+}
+div.select-options ul {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-top: 2px;
+  position: absolute;
+  width: 300px;
+  z-index: 10;
+}
+div.select-options ul li {
+  border-bottom: black solid 1px;
+  padding: 10px;
+}
+div.select-options ul li.selected-option {
   background-color: #078271;
+}
+div.select-options ul li:hover {
+  background-color: #078271;
+  color: white;
 }
 
 div.main div.container {
@@ -94,8 +143,11 @@ div.main div.container div.vous-contact-form div.vous-form-container form select
   color: black;
   width: 120px;
 }
-div.main div.container div.vous-contact-form div.contact-form-container form * {
-  padding: 8px;
+div.main div.container div.vous-contact-form div.contact-form-container {
+  flex: 1;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form input, div.main div.container div.vous-contact-form div.contact-form-container form textarea {
+  padding: 12px 8px;
 }
 div.main div.container div.vous-contact-form div.contact-form-container form div {
   display: flex;
@@ -103,7 +155,7 @@ div.main div.container div.vous-contact-form div.contact-form-container form div
   width: 100%;
 }
 div.main div.container div.vous-contact-form div.contact-form-container form div input {
-  width: 220px;
+  width: 150px;
   background-color: inherit;
   border: white solid 1px;
   border-radius: 5px;
@@ -112,10 +164,9 @@ div.main div.container div.vous-contact-form div.contact-form-container form div
   color: white;
 }
 div.main div.container div.vous-contact-form div.contact-form-container form textarea {
-  width: 100%;
-  margin-top: 10px;
+  width: 546px;
+  margin-top: 15px;
   height: 80px;
-  margin-right: 8px;
   background-color: inherit;
   border: white solid 1px;
   border-radius: 5px;

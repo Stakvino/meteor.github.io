@@ -51,6 +51,9 @@ ul.nav-links-container {
   text-transform: uppercase;
 }
 
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
 header nav {
   display: flex;
   align-items: center;
@@ -69,11 +72,57 @@ header nav ul li a {
   padding: 35px 10px;
 }
 header nav ul li a.selected {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), #078271);
+}
+
+.hide {
+  opacity: 0;
+}
+
+div.select-options {
+  cursor: pointer;
+  width: 300px;
+}
+div.select-options div.data-default_option {
+  color: black;
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.select-options div.data-default_option span.chevron {
+  position: relative;
+  top: 3px;
+  font-weight: bold;
+  display: flex;
+  transform: rotate(90deg);
+}
+div.select-options ul {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-top: 2px;
+  position: absolute;
+  width: 300px;
+  z-index: 10;
+}
+div.select-options ul li {
+  border-bottom: black solid 1px;
+  padding: 10px;
+}
+div.select-options ul li.selected-option {
   background-color: #078271;
+}
+div.select-options ul li:hover {
+  background-color: #078271;
+  color: white;
 }
 
 div.main div.container {
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
   padding: 60px 0;
   display: flex;
@@ -97,13 +146,18 @@ div.main div.container div.exposition-info div.expositions-slider {
   display: flex;
   justify-content: space-between;
 }
+div.main div.container div.exposition-info div.expositions-slider div.exposition-slide.selected-slide {
+  transform: scale(1);
+}
 div.main div.container div.exposition-info div.expositions-slider div.exposition-slide {
-  background-color: #078271;
-  width: 150px;
-  height: 200px;
+  cursor: pointer;
+  background-image: linear-gradient(#078271, #078271, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  width: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transform: scale(0.8);
 }
 div.main div.container div.exposition-info div.expositions-slider div.exposition-slide p.caption {
   text-align: center;

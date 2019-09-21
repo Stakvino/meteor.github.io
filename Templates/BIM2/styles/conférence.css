@@ -52,6 +52,9 @@ ul.nav-links-container {
   text-transform: uppercase;
 }
 
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
 header nav {
   display: flex;
   align-items: center;
@@ -70,11 +73,11 @@ header nav ul li a {
   padding: 35px 10px;
 }
 header nav ul li a.selected {
-  background-color: #078271;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), #078271);
 }
 
 div.main div.container {
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
   padding: 60px 0;
   display: flex;
@@ -83,35 +86,74 @@ div.main div.container {
 div.main div.container div.conférences-info {
   width: 380px;
 }
-div.main div.container div.conférences-info ul {
-  list-style-type: disc;
-}
 div.main div.container div.conférences-info ul li {
+  transition: color 0.4s;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: flex-start;
+}
+div.main div.container div.conférences-info ul li.selected-conférence {
+  color: white;
+}
+div.main div.container div.conférences-info ul li div.disc-time {
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+}
+div.main div.container div.conférences-info ul li div.disc-time span.list-disc {
+  margin-right: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+div.main div.container div.conférences-info ul li div.disc-time span.conférence-time {
+  margin-right: 20px;
+}
+div.main div.container div.conférences-info ul li p.conférence-detail {
+  text-align: center;
 }
 div.main div.container div.conférences-list {
-  width: 550px;
+  width: 650px;
   text-align: center;
 }
 div.main div.container div.conférences-list h3 {
   font-size: 35px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-style: italic;
+}
+div.main div.container div.conférences-list p {
+  font-size: 0.9em;
 }
 div.main div.container div.conférences-list div.speakers-container {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
+div.main div.container div.conférences-list div.speakers-container div.speaker-item.selected-speaker {
+  transform: scale(1);
+}
 div.main div.container div.conférences-list div.speakers-container div.speaker-item {
-  width: 150px;
-  background-color: #078271;
+  transition: transform 0.4s;
+  transform: scale(0.8);
+  width: 200px;
+  background-image: linear-gradient(#078271, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
   padding: 10px;
+  padding-top: 35px;
+  cursor: pointer;
 }
 div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-img img {
   border-radius: 50%;
   border: white solid 4px;
+}
+div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-info {
+  font-size: 0.9em;
+  margin-top: 8px;
+  margin-bottom: 15px;
 }
 div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-info p.speaker-name {
   font-weight: bold;

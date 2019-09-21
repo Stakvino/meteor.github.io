@@ -34,14 +34,14 @@
         <div class="vous-contact-form">
           <div class="contact-title"> <h3>Contact</h3> </div>
           <div class="vous-form-container">
-            <form action="" class="vous-form">
-              <select name="vous-etes" id="vous-etes">
-                <option value="default">Vous etes</option>
-                <option value="1">Visiteurs</option>
-                <option value="1">Exposant</option>
-                <option value="1">Partenaire</option>
-              </select>
-            </form>
+            <div class="select-options">
+              <div class="data-default_option">Vous etes <span class="chevron">&#x3009;</span></div>
+              <ul class="hide">
+                <li  data-option_value="1">Visiteurs</li>
+                <li  data-option_value="2">Exposant</li>
+                <li  data-option_value="3">Partenaire</li>
+              </ul>
+            </div>
           </div>
           <div class="contact-form-container">
             <form action="" class="contact-form">
@@ -74,6 +74,7 @@
     <footer>
     </footer>
 
+    <script src="js/select-options.js"></script>
     <script src="js/contact.js"></script>
   </body>
 </html>

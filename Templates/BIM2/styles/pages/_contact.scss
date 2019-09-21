@@ -22,16 +22,17 @@ div.main{
         }
       }
       div.contact-form-container{
+        flex: 1;
         form{
-          *{
-            padding: 8px;
+          input, textarea{
+            padding: 12px 8px;
           }
           div{
             display: flex;
             justify-content: space-between;
             width: 100%;
             input{
-              width: 220px;
+              width: 150px;
               background-color: inherit;
               border: white solid 1px;
               border-radius: 5px;
@@ -41,10 +42,9 @@ div.main{
             }
           }
           textarea{
-            width: 100%;
-            margin-top: 10px;
+            width: 546px;
+            margin-top: 15px;
             height: 80px;
-            margin-right: 8px;
             background-color: inherit;
             border: white solid 1px;
             border-radius: 5px;

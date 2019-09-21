@@ -51,6 +51,9 @@ ul.nav-links-container {
   text-transform: uppercase;
 }
 
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
 header nav {
   display: flex;
   align-items: center;
@@ -69,7 +72,7 @@ header nav ul li a {
   padding: 35px 10px;
 }
 header nav ul li a.selected {
-  background-color: #078271;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), #078271);
 }
 
 div.main div.container {
@@ -100,7 +103,7 @@ div.main div.container div.home-info div.intro-img {
 }
 div.main div.container div.home-info p.intro-text {
   width: 300px;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 /*# sourceMappingURL=home.css.map */

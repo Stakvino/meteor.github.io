@@ -35,18 +35,20 @@
           <h3>Exposition</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec </p>
           <div class="expositions-list">
-            <select name="exposition-list" id="exposition-list">
-              <option value="default">List des expositions</option>
-              <option value="1">Exposition 1</option>
-              <option value="2">Exposition 2</option>
-              <option value="3">Exposition 3</option>
-            </select>
+            <div class="select-options">
+              <div class="data-default_option">Liste des Expositions <span class="chevron">&#x3009;</span></div>
+              <ul class="hide">
+                <li  data-option_value="1">Exposition 1</li>
+                <li  data-option_value="2">Exposition 2</li>
+                <li  data-option_value="3">Exposition 3</li>
+              </ul>
+            </div>
           </div>
           <div class="expositions-slider">
             <div class="exposition-slide">
               <p class="caption">Dummy text</p>
             </div>
-            <div class="exposition-slide">
+            <div class="exposition-slide selected-slide">
               <p class="caption">Dummy text</p>
             </div>
             <div class="exposition-slide">
@@ -64,6 +66,7 @@
     <footer>
     </footer>
 
+    <script src="js/select-options.js"></script>
     <script src="js/exposition.js"></script>
   </body>
 </html>
