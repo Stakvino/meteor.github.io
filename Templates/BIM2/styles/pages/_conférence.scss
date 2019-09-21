@@ -1,0 +1,40 @@
+div.main{
+  div.container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    div.conférences-info{
+      width: 380px;
+      ul{
+        list-style-type: disc;
+        li{
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          &.selected-conférence{
+
+          }
+        }
+      }
+    }
+    div.conférences-list{
+      width:550px;
+      text-align: center;
+      h3{
+        font-size: 35px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      p{
+
+      }
+      div.speakers-container{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        @import "../components/_speaker-item.scss";
+      }
+    }
+  }
+}

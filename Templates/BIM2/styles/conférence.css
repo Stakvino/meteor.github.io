@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import "vendor/normalize.css";
+@import "vendor/jqia-slick-nav.css";
+html {
+  font-family: "Montserrat";
+  color: white;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 25px;
+}
+
+h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul.nav-links-container {
+  text-transform: uppercase;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0 auto;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: white;
+  padding: 35px 10px;
+}
+header nav ul li a.selected {
+  background-color: #078271;
+}
+
+div.main div.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+div.main div.container div.conférences-info {
+  width: 380px;
+}
+div.main div.container div.conférences-info ul {
+  list-style-type: disc;
+}
+div.main div.container div.conférences-info ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+div.main div.container div.conférences-list {
+  width: 550px;
+  text-align: center;
+}
+div.main div.container div.conférences-list h3 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+div.main div.container div.conférences-list div.speakers-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+div.main div.container div.conférences-list div.speakers-container div.speaker-item {
+  width: 150px;
+  background-color: #078271;
+  padding: 10px;
+}
+div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-img img {
+  border-radius: 50%;
+  border: white solid 4px;
+}
+div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-info p.speaker-name {
+  font-weight: bold;
+}
+div.main div.container div.conférences-list div.speakers-container div.speaker-item div.speaker-bio {
+  font-size: 0.8em;
+}
+
+/*# sourceMappingURL=conf%C3%A9rence.css.map */

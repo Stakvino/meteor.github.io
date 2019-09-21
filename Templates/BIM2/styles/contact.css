@@ -1,0 +1,147 @@
+@import "vendor/normalize.css";
+@import "vendor/jqia-slick-nav.css";
+html {
+  font-family: "Montserrat";
+  color: white;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 25px;
+}
+
+h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul.nav-links-container {
+  text-transform: uppercase;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0 auto;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: white;
+  padding: 35px 10px;
+}
+header nav ul li a.selected {
+  background-color: #078271;
+}
+
+div.main div.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+div.main div.container div.vous-contact-form {
+  display: flex;
+  align-items: flex-start;
+}
+div.main div.container div.vous-contact-form div.contact-title {
+  margin-right: 15px;
+}
+div.main div.container div.vous-contact-form div.contact-title h3 {
+  font-size: 26px;
+}
+div.main div.container div.vous-contact-form div.vous-form-container {
+  margin-right: 15px;
+}
+div.main div.container div.vous-contact-form div.vous-form-container form select {
+  color: black;
+  width: 120px;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form * {
+  padding: 8px;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form div input {
+  width: 220px;
+  background-color: inherit;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form div input::placeholder {
+  color: white;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form textarea {
+  width: 100%;
+  margin-top: 10px;
+  height: 80px;
+  margin-right: 8px;
+  background-color: inherit;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+div.main div.container div.vous-contact-form div.contact-form-container form textarea::placeholder {
+  color: white;
+}
+div.main div.container div.map-info-pratique {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+div.main div.container div.map-info-pratique div.info-pratique {
+  width: 350px;
+}
+div.main div.container div.map-info-pratique div.info-pratique address {
+  margin-bottom: 30px;
+}
+div.main div.container div.map-info-pratique div.info-pratique h4 {
+  margin-bottom: 10px;
+}
+div.main div.container div.map-info-pratique div.info-pratique h5 {
+  font-size: 17px;
+}
+div.main div.container div.map-info-pratique div.info-pratique h6 {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=contact.css.map */

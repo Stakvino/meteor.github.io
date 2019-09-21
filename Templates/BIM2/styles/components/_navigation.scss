@@ -1,0 +1,22 @@
+header{
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    ul{
+      display: flex;
+      li{
+        margin-left: 20px;
+        a{
+          color: white;
+          padding: 35px 10px;
+          &.selected{
+            background-color: $main-green;
+          }
+        }
+      }
+    }
+  }
+}

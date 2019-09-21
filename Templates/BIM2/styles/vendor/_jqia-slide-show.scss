@@ -1,0 +1,50 @@
+$main-color : #000033;
+$second-color : #1e2351;
+$border-color : darkgray;
+
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  .fade-translate{
+    position: relative;
+  }
+}
+.slider-item{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+div.controls-container{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+div.select-slides-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  @media screen and (max-width: 600px){
+    margin-bottom: 10px;
+  }
+
+  div.select-slide-control{
+    background-color: $second-color;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border: $border-color solid 1px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color .5s;
+    &:focus{
+      outline: none;
+    }
+  }
+  div.selected-slide-control{
+    background-color: $main-color;
+    transform: scale(1.3);
+  }
+}

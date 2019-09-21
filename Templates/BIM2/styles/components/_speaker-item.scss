@@ -1,0 +1,23 @@
+div.speaker-item{
+  width: 150px;
+  background-color: $main-green;
+  padding: 10px;
+  div.speaker-img{
+    
+    img{
+      border-radius: 50%;
+      border: white solid 4px;
+    }
+  }
+  div.speaker-info{
+    p.speaker-name{
+      font-weight: bold;
+    }
+    p.speaker-job{
+
+    }
+  }
+  div.speaker-bio{
+    font-size: .8em;
+  }
+}

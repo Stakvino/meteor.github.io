@@ -1,0 +1,58 @@
+div.main{
+  div.container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    div.exposition-info{
+      width: 500px;
+      h3{
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-bottom: 15px;
+      }
+      div.expositions-list{
+        color: black;
+        margin-bottom: 15px;
+        select{
+
+        }
+      }
+      div.expositions-slider{
+        display: flex;
+        justify-content: space-between;
+        div.exposition-slide{
+          background-color: $main-green;
+          width: 150px;
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          p.caption{
+            text-align: center;
+          }
+        }
+      }
+    }
+    div.exposition-aside{
+      background-image: url("../img/exposition-aside.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 450px;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div.stand-button{
+        background-color: $main-green;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+      
