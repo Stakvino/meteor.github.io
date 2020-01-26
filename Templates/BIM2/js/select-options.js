@@ -7,5 +7,4 @@ data_default_option.addEventListener("click", e => {
   }else{
     ul.classList.add("hide");
   }
-  
 })
