@@ -1077,6 +1077,8 @@ a:hover, a:active {
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
+    height: 260px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.6);
 }
 
 .grid-item .img-caption {
